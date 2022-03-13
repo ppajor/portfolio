@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,200;0,400;1,300&display=swap");
+
+:root {
+  --purple: "#4C1560";
+  --red: "#D73838";
+  --green: "#21861F";
+  --orange: "#F46A05";
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
