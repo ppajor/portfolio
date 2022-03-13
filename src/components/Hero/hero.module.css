@@ -2,30 +2,89 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-left: var(--paddingContainer);
+  padding-right: 50px;
 }
+
 .leftSection {
-  width: 60%;
+  position: relative;
+  width: 50%;
+  margin-left: 50px;
   border-radius: 1px;
   border-width: 1px;
   border-color: "#FF0000";
 }
+
+.heroHeader {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 16px rgba(117, 115, 115, 0.25);
+}
+
+.heroHeader::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: -16px;
+  height: 7px;
+  width: 80% !important;
+  border: solid 8px #d73838;
+  border-color: #d73838 transparent transparent transparent;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+
+.quoteIcon {
+  margin-right: 16px;
+}
+
+.heroParagraph {
+  width: 100%;
+  margin-top: 64px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 2.3;
+  letter-spacing: 0.025em;
+
+  text-shadow: 0px 0px 30px rgba(176, 176, 176, 0.25);
+}
+
+.heroSignature {
+  margin-top: 16px;
+  text-align: right;
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 237.5%;
+  letter-spacing: 0.02em;
+  color: rgba(53, 53, 53, 0.75);
+
+  text-shadow: 0px 4px 2px rgba(165, 164, 164, 0.2);
+}
+
 .rightSection {
   width: 40%;
   margin-top: -2%;
   opacity: 0;
 }
-.heroHeader {
-  margin-top: 100px;
-  margin-left: 150px;
-  font-weight: 700;
-  font-size: 48px;
-  color: rgba(0, 0, 0, 0.9);
+
+.scrollAnimationContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 5vh;
+  left: var(--paddingContainer);
 }
-.heroParagraph {
-  width: 65%;
-  margin-top: 48px;
-  margin-left: 150px;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 2.3;
-  letter-spacing: 0.025em;
+
+.scrollAnimation {
+  width: 96px;
+  height: auto;
+}
+
+.scrollAnimationP {
+  font-weight: 300;
+  color: #d9d9d9;
 }
