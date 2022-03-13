@@ -1,6 +1,7 @@
 import React from "react"
 import * as styles from "./hero.module.css"
-import ParallaxSVG from "../ParallaxSVG"
+
+import ParallaxSVG from "../../assets/svg/heroSVG.svg"
 
 function Hero({ headerRef, paragraphRef, svgRef }) {
   return (

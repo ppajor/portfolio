@@ -23,7 +23,7 @@ export default function Home() {
     })
     tl.from(navRef.current, {
       yPercent: -100,
-      duration: 0.8,
+      duration: 1,
       ease: "power2.in",
     })
     tl.from(headerRef.current, {
