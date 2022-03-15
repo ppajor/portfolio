@@ -2,19 +2,13 @@ import React from "react"
 
 function ParallaxSVG() {
   return (
-    <svg
-      width="580"
-      height="544"
-      viewBox="0 0 580 544"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 580 544" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M300.933 74.1555C337.443 87.0142 374.695 90.2403 410.371 105.258C453.246 123.306 501.695 134.14 530.396 170.746C562.055 211.125 592.538 266.77 574.731 314.888C556.402 364.417 489.686 371.968 445.325 400.629C414.687 420.424 385.008 437.592 354.312 457.296C309.063 486.343 275.822 546.639 222.12 543.91C170.141 541.269 142.24 481.739 105.717 444.664C66.5067 404.862 5.52679 374.37 0.302747 318.746C-4.93697 262.956 59.2907 226.731 80.3728 174.811C102.853 119.449 73.087 30.4223 127.451 5.61266C185.185 -20.7353 241.074 53.0731 300.933 74.1555Z"
         fill="#EBEBEB"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <circle cx="191.5" cy="208.5" r="63.5" fill="url(#paint0_linear_73_2)" />
       <circle cx="427" cy="332" r="49" fill="url(#paint1_linear_73_2)" />
@@ -29,8 +23,8 @@ function ParallaxSVG() {
           y2="189.561"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E3A0A0" />
-          <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+          <stop stopColor="#E3A0A0" />
+          <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_73_2"
@@ -40,8 +34,8 @@ function ParallaxSVG() {
           y2="317.386"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E3CDA0" />
-          <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+          <stop stopColor="#E3CDA0" />
+          <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_73_2"
@@ -51,8 +45,8 @@ function ParallaxSVG() {
           y2="306.105"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#B6E3A0" />
-          <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+          <stop stopColor="#B6E3A0" />
+          <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_73_2"
@@ -62,8 +56,8 @@ function ParallaxSVG() {
           y2="137.281"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D2A0E3" />
-          <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+          <stop stopColor="#D2A0E3" />
+          <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

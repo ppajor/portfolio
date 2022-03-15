@@ -5,7 +5,9 @@
   --red: "#D73838";
   --green: "#21861F";
   --orange: "#F46A05";
+  --paddingContainerSm: 32px;
   --paddingContainer: 100px;
+  --paddingContainerXl: 150px;
 }
 
 html,

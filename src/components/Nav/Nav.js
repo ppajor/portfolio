@@ -3,6 +3,7 @@ import * as styles from "./nav.module.css"
 import Logo from "../../assets/svg/nav-logo.svg"
 import { FaBrain, FaUser, FaPhoneAlt } from "react-icons/fa"
 import { BsGearFill } from "react-icons/bs"
+import { HiOutlineMenuAlt3 } from "react-icons/hi"
 
 function Nav({ navRef }) {
   return (
@@ -27,6 +28,9 @@ function Nav({ navRef }) {
           Kontakt
         </li>
       </ul>
+      <div className={styles.hamburgerMenuContainer}>
+        <HiOutlineMenuAlt3 className={styles.hamburgerMenu} size={32} />
+      </div>
     </nav>
   )
 }
