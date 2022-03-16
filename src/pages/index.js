@@ -5,6 +5,9 @@ import logoXD from "../assets/logoXD.png"
 import Nav from "../components/Nav/Nav"
 import Hero from "../components/Hero/Hero"
 import { FaBorderNone } from "react-icons/fa"
+import { HiX } from "react-icons/hi"
+import { FaBrain, FaUser, FaPhoneAlt, FaMagic } from "react-icons/fa"
+import { BsGearFill } from "react-icons/bs"
 
 export default function Home() {
   const [typingStopped, setTypingStopped] = useState(true)
@@ -103,7 +106,7 @@ export default function Home() {
         <img className={styles.img} src={logoXD} alt="logo" />
       </div>
       <div className={styles.mainContainer}>
-        <Nav navRef={navRef} hamburgerOpen={menuOpen} />
+        <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
         <Hero
           headerRef={headerRef}
           paragraphRef={pRef}
@@ -112,6 +115,37 @@ export default function Home() {
           arrowRef={arrow}
           typingAnimationStopped={typingStopped}
         />
+        {menuOpen && (
+          <div className={styles.mobileNavContainer}>
+            <div
+              className={styles.exitIconContainer}
+              onClick={() =>
+                setMenuOpen(false)
+              } /*sposob na on clicka w divie w reactie*/
+            >
+              <HiX size={32} />
+            </div>
+            <div className={styles.mobileNavContentContainer}>
+              <ul>
+                <li className={styles.mobileNavLi}>
+                  <FaBrain className={styles.iconProjects} size={24} />
+                  Projekty
+                </li>
+                <li className={styles.mobileNavLi}>
+                  <FaUser className={styles.iconAboutMe} size={24} />O mnie
+                </li>
+                <li className={styles.mobileNavLi}>
+                  <FaMagic className={styles.iconSkills} size={24} />{" "}
+                  Umiejętności
+                </li>
+                <li className={styles.mobileNavLi}>
+                  <FaPhoneAlt className={styles.iconContact} size={24} />{" "}
+                  Kontakt
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )

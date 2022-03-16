@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,200;0,400;1,300&display=swap");
 
 :root {
-  --purple: "#4C1560";
-  --red: "#D73838";
-  --green: "#21861F";
-  --orange: "#F46A05";
+  --purple: rgba(76, 21, 96, 1);
+  --red: rgba(215, 56, 56, 1);
+  --green: rgba(33, 134, 31, 1);
+  --orange: rgba(244, 106, 5, 1);
+  --halfPurple: rgba(76, 21, 96, 0.5);
+  --halfRed: rgba(215, 56, 56, 0.5);
+  --halfGreen: rgba(33, 134, 31, 0.5);
+  --halfOrange: rgba(244, 106, 5, 0.5);
   --paddingContainerSm: 32px;
   --paddingContainer: 100px;
   --paddingContainerXl: 150px;
+  --navHeight: 12vh;
 }
 
 html,
@@ -17,4 +22,8 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+
+.projectsIcon > * {
+  fill: "#b3b3b3";
 }

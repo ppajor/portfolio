@@ -27,3 +27,108 @@
   width: 35%;
   height: auto;
 }
+
+.mobileNavContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: calc(var(--paddingContainerSm) * 2);
+  padding-right: var(--paddingContainerSm);
+  background: linear-gradient(90deg, #f3f3f3 0%, #ffffff 100%);
+  z-index: 3;
+}
+
+.mobileNavContentContainer {
+  display: flex;
+  align-items: center;
+  height: calc(
+    100vh - var(--navHeight)
+  ); /*spacje między operatorem bo inaczej nie działa*/
+}
+
+.mobileNavLi {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+
+  color: #242424;
+
+  text-shadow: 2px 3px 24px rgba(185, 185, 185, 0.4);
+}
+
+/*** icons ***/
+
+.icon {
+  margin-right: 24px;
+}
+
+.iconProjects {
+  margin-right: 24px;
+}
+
+.iconProjects > * {
+  fill: var(--halfPurple);
+  transition: 0.2s ease-in;
+}
+
+.mobileNavLi:hover .iconProjects > * {
+  fill: var(--purple);
+  transition: 0.2s ease-in;
+}
+
+.iconAboutMe {
+  margin-right: 24px;
+  transition: 0.2s ease-in;
+}
+
+.iconAboutMe > * {
+  fill: var(--halfRed);
+}
+
+.mobileNavLi:hover .iconAboutMe > * {
+  fill: var(--red);
+  transition: 0.2s ease-in;
+}
+
+.iconSkills {
+  margin-right: 24px;
+}
+
+.iconSkills > * {
+  fill: var(--halfGreen);
+  transition: 0.2s ease-in;
+}
+
+.mobileNavLi:hover .iconSkills > * {
+  fill: var(--green);
+  transition: 0.2s ease-in;
+}
+
+.iconContact {
+  margin-right: 24px;
+  transition: 0.2s ease-in;
+}
+
+.iconContact > * {
+  fill: var(--halfOrange);
+}
+
+.mobileNavLi:hover .iconContact > * {
+  fill: var(--orange);
+  transition: 0.2s ease-in;
+}
+
+.exitIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: var(--navHeight);
+}
