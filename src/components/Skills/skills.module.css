@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 100px;
+  box-shadow: 16px 16px 52px #ededed, -16px -16px 52px #ffffff;
+}
+
+.headerGreen {
+  color: var(--green);
+}
+
+.headerGreen:before {
+  background-color: var(--green);
+}

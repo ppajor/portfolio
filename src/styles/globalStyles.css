@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Poppins:ital,wght@0,200;0,400;0,600;1,300&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.customContainer {
+  padding-left: var(--paddingContainer);
+  padding-right: var(--paddingContainer);
+  padding-top: 50px;
+  margin-bottom: var(--paddingContainer);
+}
+
+.sectionHeader {
+  margin-bottom: var(--paddingContainer);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  /* identical to box height, or 32px */
+
+  letter-spacing: 0.025em;
+  color: var(--purple);
+}
+
+.sectionHeader:before {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 3px;
+  position: relative;
+  bottom: 16px;
+  background-color: var(--purple);
+}
+
+@media screen and (max-width: 1090px) {
+  .customContainer {
+    padding-left: var(--paddingContainerSm);
+    padding-right: var(--paddingContainerSm);
+  }
+}

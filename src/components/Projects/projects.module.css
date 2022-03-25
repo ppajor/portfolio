@@ -1,0 +1,140 @@
+.checkContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkHeader {
+  width: 40%;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 137.5%;
+  color: var(--headerColor);
+}
+
+.checkParagraph {
+  width: 60%;
+  font-size: 16px;
+  line-height: var(--line-height-1);
+  letter-spacing: 0.025em;
+
+  color: rgba(64, 64, 64, 0.9);
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  margin-top: 160px;
+  padding-right: 64px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  background: #ffffff;
+  box-shadow: 2px 3px 24px rgba(213, 213, 213, 0.25);
+  border-radius: 16px;
+}
+
+.mockupContainer {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectContentContainer {
+  width: 65%;
+}
+
+.projectContentHeader {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+
+  color: var(--headerColor);
+}
+
+.projectContentParagraph {
+  margin-bottom: 48px;
+  line-height: var(--line-height-1);
+  letter-spacing: 0.025em;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.projectContentTechnologies {
+  width: 100%;
+  margin-bottom: 24px;
+  line-height: var(--line-height-content);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.grayText {
+  margin-left: 8px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.projectContainerBtn {
+  display: block;
+  margin-left: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 48px;
+  padding-right: 48px;
+  background: rgba(76, 21, 96, 0.65);
+  box-shadow: 2px 3px 16px rgba(213, 213, 213, 0.5);
+  border-radius: 4px;
+  font-family: "Poppins";
+  line-height: 29px;
+  letter-spacing: 0.025em;
+
+  filter: drop-shadow(0px 0px 16px rgba(183, 183, 183, 0.2));
+  color: #f9f9f9;
+  outline: none;
+  border: 0;
+}
+
+@media screen and (max-width: 1090px) {
+  .checkContainer {
+    flex-direction: column;
+  }
+
+  .checkHeader {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .checkParagraph {
+    width: 100%;
+  }
+
+  .project {
+    flex-direction: column;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .mockupContainer {
+    width: 100%;
+  }
+
+  .projectContentContainer {
+    width: 100%;
+  }
+  .projectContentHeader {
+    margin-top: 32px;
+    text-align: center;
+    text-shadow: 2px 3px 8px rgba(84, 84, 84, 0.15);
+  }
+  .projectContentParagraph {
+    text-align: center;
+  }
+  .projectContentTechnologies {
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .projectContainerBtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

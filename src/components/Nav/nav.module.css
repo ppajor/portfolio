@@ -1,12 +1,17 @@
 .nav {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   min-height: var(--navHeight);
-
-  background: linear-gradient(180deg, #f9f9f9 0%, rgba(249, 249, 249, 0) 100%);
-  filter: drop-shadow(0px 1px 24px rgba(187, 187, 187, 0.15));
+  background: linear-gradient(
+    180deg,
+    #f9f9f9 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(0px 2px 16px rgba(143, 143, 143, 0.25));
+  z-index: 5;
 }
 .logo {
   position: absolute;
@@ -43,6 +48,10 @@
 @media screen and (max-width: 1090px) {
   .nav {
     margin-bottom: 0;
+  }
+
+  .logo {
+    left: var(--paddingContainerSm);
   }
 }
 
