@@ -50,10 +50,31 @@
   color: rgba(64, 64, 64, 0.9);
 }
 
+.contactBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--red);
+}
+
 @media screen and (max-width: 1090px) {
   .img {
     width: 250px;
     height: 300px;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .aboutImgContainer {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .aboutContentContainer {
+    width: 100%;
+    padding-left: 0px;
+    padding-bottom: 96px;
   }
 }
 

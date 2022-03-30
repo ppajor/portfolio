@@ -1,11 +1,11 @@
 .container {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
+  flex-direction: row;
+}
+
+.container:nth-of-type(1) {
   margin-bottom: 100px;
-  box-shadow: 16px 16px 52px #ededed, -16px -16px 52px #ffffff;
 }
 
 .headerGreen {
@@ -14,4 +14,89 @@
 
 .headerGreen:before {
   background-color: var(--green);
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  padding-right: 64px;
+}
+
+.headerPosition {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+/*
+.header:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 50px;
+  margin-left: auto;
+  background-color: #ededed;
+}
+*/
+
+.technologiesSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.toolsSection {
+  padding-left: 64px;
+  padding-right: 0px;
+}
+
+.technologyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  box-shadow: 16px 16px 52px #ededed, -16px -16px 52px #ffffff;
+}
+
+.technologyContainer:hover {
+  box-shadow: inset 16px 16px 52px #ededed, inset -16px -16px 52px #ffffff;
+  /*transition: 0.2s ease-in;*/
+}
+
+@media screen and (max-width: 1090px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .introSection {
+    display: flex;
+    width: 100%;
+    margin-bottom: 64px;
+    padding-left: 0;
+    padding-right: 0;
+    order: 2;
+  }
+
+  .headerPosition {
+    margin-top: 0;
+  }
+
+  .technologyContainer {
+    width: 75px;
+    height: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .logo {
+    transform: scale(75%);
+  }
+
+  .technologiesSection {
+    display: flex;
+    width: 100%;
+    order: 3;
+  }
 }

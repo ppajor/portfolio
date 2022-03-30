@@ -1,0 +1,7 @@
+.headerOrange {
+  color: var(--orange);
+}
+
+.headerOrange:before {
+  background: var(--orange);
+}

@@ -10,7 +10,10 @@
   --paddingContainerSm: 32px;
   --paddingContainer: 100px;
   --paddingContainerXl: 150px;
+  --marginContainer: 125px;
+  --marginSectionHeader: 64px;
   --navHeight: 12vh;
   --headerColor: rgba(32, 32, 32, 0.9);
   --line-height-1: 200%;
+  --letter-spacing-1: 0.025em;
 }

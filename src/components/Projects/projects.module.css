@@ -8,7 +8,7 @@
   width: 40%;
   font-weight: 700;
   font-size: 32px;
-  line-height: 137.5%;
+  line-height: 200%;
   color: var(--headerColor);
 }
 
@@ -64,7 +64,7 @@
 .projectContentTechnologies {
   width: 100%;
   margin-bottom: 24px;
-  line-height: var(--line-height-content);
+  line-height: var(--line-height-1);
   font-weight: 600;
   color: rgba(0, 0, 0, 0.9);
 }
@@ -76,23 +76,7 @@
 }
 
 .projectContainerBtn {
-  display: block;
   margin-left: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 48px;
-  padding-right: 48px;
-  background: rgba(76, 21, 96, 0.65);
-  box-shadow: 2px 3px 16px rgba(213, 213, 213, 0.5);
-  border-radius: 4px;
-  font-family: "Poppins";
-  line-height: 29px;
-  letter-spacing: 0.025em;
-
-  filter: drop-shadow(0px 0px 16px rgba(183, 183, 183, 0.2));
-  color: #f9f9f9;
-  outline: none;
-  border: 0;
 }
 
 @media screen and (max-width: 1090px) {

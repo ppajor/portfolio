@@ -5,12 +5,12 @@ import av from "../../assets/img/cv-foto.jpg"
 function About() {
   return (
     <div className="customContainer">
-      <h3 className={`sectionHeader ${styles.headerRed}`}>O mnie</h3>
+      <h3 className={`sectionHeader revealTop ${styles.headerRed}`}>O mnie</h3>
       <div className={styles.container}>
-        <div className={styles.aboutImgContainer}>
-          <img className={styles.img} src={av} alt="av" />
+        <div className={`revealLeft ${styles.aboutImgContainer}`}>
+          <img className={` ${styles.img}`} src={av} alt="av" />
         </div>
-        <div className={styles.aboutContentContainer}>
+        <div className={`revealRight ${styles.aboutContentContainer}`}>
           <h2 className={styles.aboutHeader}>Cześć! Jestem Paweł! :)</h2>
           <p className={styles.aboutParagraph}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut
@@ -22,6 +22,9 @@ function About() {
             at donec blandit. Amet sit eget venenatis felis, quis in. Vitae
             donec aliquet vitae pretium.
           </p>
+          <button className={`btnPrimary ${styles.contactBtn}`}>
+            Skontaktuj się ze mną!
+          </button>
         </div>
       </div>
     </div>

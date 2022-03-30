@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { HiX } from "react-icons/hi"
 
 import * as styles from "../styles/index.module.css"
+import SmoothScroll from "../components/SmoothScroll"
 import logoXD from "../assets/logoXD.png"
 import Nav from "../components/Nav/Nav"
 import Hero from "../components/Hero/Hero"
@@ -10,6 +12,7 @@ import NavMobile from "../components/NavMobile/NavMobile"
 import Projects from "../components/Projects/Projects"
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
+import Contact from "../components/Contact/Contact"
 
 export default function Home() {
   const [typingStopped, setTypingStopped] = useState(true)
@@ -23,9 +26,61 @@ export default function Home() {
   const signatureRef = useRef()
   const arrow = useRef()
 
+  gsap.registerPlugin(ScrollTrigger)
+
   console.log("menu open", menuOpen)
 
   useEffect(() => {
+    const topTriggers = gsap.utils.toArray(".revealTop")
+    topTriggers.forEach(item => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+        },
+        y: -100,
+        duration: 2,
+        delay: 0.5,
+        markers: true,
+        start: "top top",
+        ease: "power3.out",
+        opacity: 0,
+      })
+    })
+
+    const leftTriggers = gsap.utils.toArray(".revealLeft")
+    leftTriggers.forEach(item => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+        },
+        x: -30,
+        duration: 2,
+        delay: 0.5,
+
+        markers: true,
+        start: "top top",
+        ease: "power3.out",
+        opacity: 0,
+      })
+    })
+
+    const rightTriggers = gsap.utils.toArray(".revealRight")
+    rightTriggers.forEach(item => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+        },
+        x: 30,
+        duration: 2,
+        delay: 0.5,
+
+        markers: true,
+        start: "top top",
+        ease: "power3.out",
+        opacity: 0,
+      })
+    })
+
     var tl = gsap.timeline()
 
     tl.to(animation.current, {
@@ -135,6 +190,7 @@ export default function Home() {
         <Projects />
         <About />
         <Skills />
+        <Contact />
       </div>
     </>
   )

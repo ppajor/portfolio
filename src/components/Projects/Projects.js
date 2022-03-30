@@ -6,10 +6,12 @@ import mockupBooking from "../../assets/img/mockup-booking.png"
 function Projects() {
   return (
     <section className="customContainer">
-      <h3 className="sectionHeader">Projekty</h3>
+      <h3 className="revealTop sectionHeader">Projekty</h3>
       <div className={styles.checkContainer}>
-        <h2 className={styles.checkHeader}>Sprawdź moje projekty!</h2>
-        <p className={styles.checkParagraph}>
+        <h2 className={`revealLeft ${styles.checkHeader}`}>
+          Sprawdź moje projekty!
+        </h2>
+        <p className={`revealRight ${styles.checkParagraph}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
           mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
           lectus enim. In vulputate vel varius elit mauris duis integer cras
@@ -17,7 +19,7 @@ function Projects() {
           Sit adipiscing non condimentum ornare netus vitae tortor, semper.
         </p>
       </div>
-      <article className={styles.project}>
+      <article className={`revealLeft ${styles.project}`}>
         <div className={styles.mockupContainer}>
           <img src={mockupBooking} alt="mockup" />
         </div>
@@ -37,7 +39,9 @@ function Projects() {
               react native, firebase, node.js, npm
             </span>
           </p>
-          <button className={styles.projectContainerBtn}>Sprawdź</button>
+          <button className={`btnPrimary ${styles.projectContainerBtn}`}>
+            Sprawdź
+          </button>
         </div>
       </article>
     </section>
