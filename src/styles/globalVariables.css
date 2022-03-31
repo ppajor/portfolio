@@ -7,11 +7,13 @@
   --halfRed: rgba(215, 56, 56, 0.5);
   --halfGreen: rgba(33, 134, 31, 0.5);
   --halfOrange: rgba(244, 106, 5, 0.5);
+
   --paddingContainerSm: 32px;
   --paddingContainer: 100px;
   --paddingContainerXl: 150px;
   --marginContainer: 125px;
   --marginSectionHeader: 64px;
+  --spaceBetweenColumns: 100px;
   --navHeight: 12vh;
   --headerColor: rgba(32, 32, 32, 0.9);
   --line-height-1: 200%;
