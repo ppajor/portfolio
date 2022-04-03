@@ -13,6 +13,7 @@ import Projects from "../components/Projects/Projects"
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import Contact from "../components/Contact/Contact"
+import Footer from "../components/Footer/Footer"
 
 export default function Home() {
   const [typingStopped, setTypingStopped] = useState(true)
@@ -39,7 +40,7 @@ export default function Home() {
         },
         y: -100,
         duration: 2,
-        delay: 0.5,
+        delay: 0.2,
         markers: true,
         start: "top top",
         ease: "power3.out",
@@ -55,7 +56,7 @@ export default function Home() {
         },
         x: -30,
         duration: 2,
-        delay: 0.5,
+        delay: 0.2,
 
         markers: true,
         start: "top top",
@@ -72,7 +73,7 @@ export default function Home() {
         },
         x: 30,
         duration: 2,
-        delay: 0.5,
+        delay: 0.2,
 
         markers: true,
         start: "top top",
@@ -184,13 +185,14 @@ export default function Home() {
             >
               <HiX size={32} />
             </div>
-            <NavMobile />
+            <NavMobile clickLink={() => setMenuOpen(false)} />
           </div>
         )}
         <Projects />
         <About />
         <Skills />
         <Contact />
+        <Footer />
       </div>
     </>
   )

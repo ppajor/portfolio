@@ -8,6 +8,7 @@
   font-family: "Poppins";
 }
 .animationContainer {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +19,8 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 2;
-  background-color: "#f9f9f9";
+  z-index: 100;
+  background: linear-gradient(180deg, #f9f9f9 0%, rgba(249, 249, 249, 0) 100%);
   overflow-y: hidden;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .mobileNavContainer {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -46,4 +47,11 @@
   padding-right: var(--paddingContainerSm);
   background: linear-gradient(90deg, #f3f3f3 0%, #ffffff 100%);
   z-index: 10;
+}
+
+@media screen and (max-width: 684px) {
+  .mobileNavContainer {
+    padding-left: var(--paddingContainerSm);
+    font-size: 0.9em;
+  }
 }

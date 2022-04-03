@@ -17,7 +17,7 @@ import * as styles from "./skills.module.css"
 
 function Skills() {
   return (
-    <div className="customContainer">
+    <div id="skillsSection" className="customContainer">
       <h3 className={`sectionHeader revealTop ${styles.headerGreen}`}>
         UMIEJĘTNOŚCI
       </h3>

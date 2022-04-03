@@ -4,26 +4,26 @@
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   padding-left: var(--paddingContainer);
   padding-right: 50px;
   /* margin-bottom: var(--paddingContainer);*/
 }
 
 .leftSection {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
   position: relative;
   width: 50%;
+  margin-top: var(--navHeight);
+  padding-top: 150px;
   margin-left: 50px;
 }
 
 .heroHeader {
+  width: var(--pseudo-element-width);
   font-weight: 700;
   font-size: 48px;
   color: rgba(0, 0, 0, 0.9);
@@ -71,27 +71,57 @@
   text-shadow: 0px 4px 2px rgba(165, 164, 164, 0.2);
 }
 
+/* right section*/
 .rightSection {
+  position: relative; /*trzeba dac relative bo bierze wyzszego rodzica */
+  width: 50%;
+  margin-top: var(--navHeight);
   display: flex;
-  align-items: center;
-  width: 40%;
-  margin-top: -2%;
+  justify-content: center;
+  padding: 50px;
+
+  /*
   margin-left: 5%;
   padding-left: 5%;
-  height: 100vh;
+
   background-image: url("../../assets/img/background-rightsection.png");
   background-position: center;
-  background-size: 90%;
   background-repeat: no-repeat;
+  */
 }
 
-.parallaxContainer {
-  padding: 36px;
+.imgMe {
+  display: block;
+  width: 300px;
+  height: 400px;
 }
 
-.eclipsesImg {
-  width: 90%;
-  height: auto;
+.eclipseContainer {
+  padding: 16px;
+}
+
+.redEclipse {
+  position: absolute;
+  top: 15%;
+  left: 23%;
+}
+
+.greenEclipse {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+}
+
+.purpleEclipse {
+  position: absolute;
+  top: 0%;
+  left: 60%;
+}
+
+.orangeEclipse {
+  position: absolute;
+  top: 55%;
+  left: 70%;
 }
 
 .scrollAnimationContainer {
@@ -99,7 +129,7 @@
   flex-direction: row;
   align-items: center;
   position: absolute;
-  bottom: 5vh;
+  bottom: 0vh;
   left: var(--paddingContainer);
 }
 
@@ -107,7 +137,7 @@
   width: 96px;
   height: auto;
 }
-
+/*
 .scrollAnimationP {
   font-weight: 300;
   color: #d9d9d9;
@@ -119,17 +149,20 @@
     height: auto;
   }
 }
-
+*/
 @media screen and (max-width: 1090px) {
   .hero {
+    flex-direction: column;
+    min-height: max-content;
     padding-right: var(--paddingContainer);
     padding-left: var(--paddingContainer);
   }
 
   .leftSection {
     width: 100%;
-    height: 100%;
     margin-left: 0;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .heroSignature {
@@ -137,7 +170,19 @@
   }
 
   .rightSection {
-    display: none;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+
+  .imgMe {
+    width: 250px;
+    height: auto;
+  }
+
+  .eclipse {
+    width: 85%;
+    height: auto;
   }
 
   .scrollAnimationContainer {
@@ -153,12 +198,28 @@
 
   .heroHeader {
     display: block;
+    width: var(--pseudo-element-width-sm);
     line-height: 64px;
+  }
+
+  .heroHeader:before {
+    width: var(--pseudo-element-width-sm) !important;
+  }
+
+  .imgMe {
+    width: 200px;
+    height: auto;
+  }
+
+  .eclipse {
+    width: 75%;
+    height: auto;
   }
 }
 
-@media screen and (max-width: 545px) {
-  .heroHeader:before {
-    width: var(--pseudo-element-width-sm) !important;
+@media screen and (max-width: 300px) {
+  .heroHeader {
+    display: inline-block;
+    font-size: 32px !important;
   }
 }

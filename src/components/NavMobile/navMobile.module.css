@@ -6,7 +6,13 @@
   ); /*spacje między operatorem bo inaczej nie działa*/
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .mobileNavLi {
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
   font-family: "Poppins";
@@ -15,7 +21,7 @@
   font-size: 32px;
   line-height: 42px;
   /* identical to box height */
-
+  text-decoration: none;
   color: #242424;
 
   text-shadow: 2px 3px 24px rgba(185, 185, 185, 0.4);
@@ -81,4 +87,10 @@
 .mobileNavLi:hover .iconContact > * {
   fill: var(--orange);
   transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 684px) {
+  .mobileNavLi {
+    font-size: 28px;
+  }
 }

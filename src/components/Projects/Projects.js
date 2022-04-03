@@ -5,13 +5,13 @@ import mockupBooking from "../../assets/img/mockup-booking.png"
 
 function Projects() {
   return (
-    <section className="customContainer">
-      <h3 className="revealTop sectionHeader">Projekty</h3>
+    <section id="projectsSection" className="customContainer">
+      <h3 className="revealTop sectionHeader">PROJEKTY</h3>
       <div className={styles.checkContainer}>
         <h2 className={`revealLeft ${styles.checkHeader}`}>
           Sprawdź moje projekty!
         </h2>
-        <p className={`revealRight ${styles.checkParagraph}`}>
+        <p className={`revealRight ${styles.checkParagraph} paragraph`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
           mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
           lectus enim. In vulputate vel varius elit mauris duis integer cras
@@ -25,7 +25,7 @@ function Projects() {
         </div>
         <div className={styles.projectContentContainer}>
           <h2 className={styles.projectContentHeader}>Booking</h2>
-          <p className={styles.projectContentParagraph}>
+          <p className={` ${styles.projectContentParagraph} paragraph`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
             mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
             lectus enim. In vulputate vel varius elit mauris duis integer cras

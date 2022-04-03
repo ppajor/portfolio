@@ -5,11 +5,16 @@ import {
 } from "react-parallax-mouse"
 import Typed from "react-typed"
 import lottie from "lottie-web"
+import { FaQuoteLeft } from "react-icons/fa"
 
 import * as styles from "./hero.module.css"
 import eclipses from "../../assets/img/eclipses.png"
-import { FaQuoteLeft } from "react-icons/fa"
+import green from "../../assets/img/green.png"
+import orange from "../../assets/img/orange.png"
+import purple from "../../assets/img/purple.png"
+import red from "../../assets/img/red.png"
 import animation from "../../assets/lottie/arrow-down.json"
+import ja from "../../assets/img/ja.jpg"
 
 function Hero({
   arrowRef,
@@ -29,7 +34,7 @@ function Hero({
     })
   }, [])
   return (
-    <div className={styles.hero}>
+    <div id="heroSection" className={styles.hero}>
       <section className={styles.leftSection}>
         <div ref={headerRef}>
           <Typed
@@ -54,17 +59,45 @@ function Hero({
           Paweł Pajor
         </p>
       </section>
-      <div className={styles.rightSection} ref={svgRef}>
-        <MouseParallaxContainer className={styles.parallaxContainer}>
-          <MouseParallaxChild factorX={0.03} factorY={0.05}>
-            <img
-              className={styles.eclipsesImg}
-              src={eclipses}
-              alt="moving eclipses"
-            />
-          </MouseParallaxChild>
-        </MouseParallaxContainer>
-      </div>
+      <section className={styles.rightSection} ref={svgRef}>
+        <img className={styles.imgMe} src={ja} />
+        <div className={styles.redEclipse}>
+          <MouseParallaxContainer className={styles.eclipseContainer}>
+            <MouseParallaxChild factorX={0.05} factorY={0.07}>
+              <img className={styles.eclipse} src={red} alt="red eclipse" />
+            </MouseParallaxChild>
+          </MouseParallaxContainer>
+        </div>
+        <div className={styles.greenEclipse}>
+          <MouseParallaxContainer className={styles.eclipseContainer}>
+            <MouseParallaxChild factorX={0.05} factorY={0.07}>
+              <img className={styles.eclipse} src={green} alt="green eclipse" />
+            </MouseParallaxChild>
+          </MouseParallaxContainer>
+        </div>
+        <div className={styles.purpleEclipse}>
+          <MouseParallaxContainer className={styles.eclipseContainer}>
+            <MouseParallaxChild factorX={0.05} factorY={0.07}>
+              <img
+                className={styles.eclipse}
+                src={purple}
+                alt="purple eclipse"
+              />
+            </MouseParallaxChild>
+          </MouseParallaxContainer>
+        </div>
+        <div className={styles.orangeEclipse}>
+          <MouseParallaxContainer className={styles.eclipseContainer}>
+            <MouseParallaxChild factorX={0.05} factorY={0.07}>
+              <img
+                className={styles.eclipse}
+                src={orange}
+                alt="orange eclipse"
+              />
+            </MouseParallaxChild>
+          </MouseParallaxContainer>
+        </div>
+      </section>
       <div className={styles.scrollAnimationContainer} ref={arrowRef}>
         <div className={styles.scrollAnimation} ref={animationContainer}></div>
       </div>

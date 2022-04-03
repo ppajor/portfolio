@@ -54,13 +54,18 @@ body {
   color: #f9f9f9;
   outline: none;
   border: 0;
+  transition: 0.5s ease;
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.25);
+  transition: 0.5s ease;
 }
 
 .header {
   font-weight: 600;
   font-size: 32px;
-  line-height: 200%;
-  letter-spacing: var(--letter-spacing-1);
+  line-height: 150%;
 
   color: rgba(32, 32, 32, 0.9);
 }
@@ -80,9 +85,59 @@ body {
   width: 45%;
 }
 
+/* icons */
+
+.iconProjects > * {
+  fill: var(--halfPurple);
+  transition: 0.2s ease-in;
+}
+
+.link:hover .iconProjects > * {
+  fill: var(--purple);
+  transition: 0.2s ease-in;
+}
+
+.iconAboutMe > * {
+  fill: var(--halfRed);
+}
+
+.link:hover .iconAboutMe > * {
+  fill: var(--red);
+  transition: 0.2s ease-in;
+}
+
+.iconSkills > * {
+  fill: var(--halfGreen);
+  transition: 0.2s ease-in;
+}
+
+.link:hover .iconSkills > * {
+  fill: var(--green);
+  transition: 0.2s ease-in;
+}
+
+.iconContact > * {
+  fill: var(--halfOrange);
+}
+
+.link:hover .iconContact > * {
+  fill: var(--orange);
+  transition: 0.2s ease-in;
+}
+
+/* media queries */
+
 @media screen and (max-width: 1090px) {
   .customContainer {
     padding-left: var(--paddingContainerSm);
     padding-right: var(--paddingContainerSm);
+  }
+
+  .shortCol {
+    width: 100%;
+  }
+
+  .longCol {
+    width: 100%;
   }
 }

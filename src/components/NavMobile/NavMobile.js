@@ -1,24 +1,44 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FaBrain, FaUser, FaPhoneAlt, FaMagic } from "react-icons/fa"
+
 import * as styles from "./navMobile.module.css"
 
-function NavMobile() {
+function NavMobile(props) {
   return (
     <div className={styles.mobileNavContentContainer}>
       <ul>
-        <li className={styles.mobileNavLi}>
-          <FaBrain className={styles.iconProjects} size={24} />
+        <Link
+          onClick={() => props.clickLink()}
+          to="#projectsSection"
+          className={`link ${styles.mobileNavLi}`}
+        >
+          <FaBrain className={`iconProjects ${styles.icon}`} size={24} />
           Projekty
-        </li>
-        <li className={styles.mobileNavLi}>
-          <FaUser className={styles.iconAboutMe} size={24} />O mnie
-        </li>
-        <li className={styles.mobileNavLi}>
-          <FaMagic className={styles.iconSkills} size={24} /> Umiejętności
-        </li>
-        <li className={styles.mobileNavLi}>
-          <FaPhoneAlt className={styles.iconContact} size={24} /> Kontakt
-        </li>
+        </Link>
+        <Link
+          onClick={() => props.clickLink()}
+          to="#aboutSection"
+          className={`link ${styles.mobileNavLi}`}
+        >
+          <FaUser className={`iconAboutMe ${styles.icon}`} size={24} />O mnie
+        </Link>
+        <Link
+          onClick={() => props.clickLink()}
+          to="#skillsSection"
+          className={`link ${styles.mobileNavLi}`}
+        >
+          <FaMagic className={`iconSkills ${styles.icon}`} size={24} />
+          Umiejętności
+        </Link>
+        <Link
+          onClick={() => props.clickLink()}
+          to="#contactSection"
+          className={`link ${styles.mobileNavLi}`}
+        >
+          <FaPhoneAlt className={`iconContact ${styles.icon}`} size={24} />
+          Kontakt
+        </Link>
       </ul>
     </div>
   )

@@ -6,12 +6,12 @@ import * as styles from "./contact.module.css"
 
 function Contact() {
   return (
-    <div className="customContainer">
+    <div id="#contactSection" className="customContainer">
       <h3 className={`sectionHeader revealTop ${styles.headerOrange}`}>
         KONTAKT
       </h3>
       <div className={styles.container}>
-        <div className={`shortCol revealLeft ${styles.contactInfo}`}>
+        <div className={`longCol revealLeft ${styles.contactInfo}`}>
           <h2 className={`header ${styles.headerCustom}`}>
             Jak mogę Ci pomóc?
           </h2>
@@ -29,19 +29,30 @@ function Contact() {
             <p className={styles.contactBoxText}>535204304</p>
           </div>
         </div>
-        <div className={`longCol revealRight `}>
-          <form className={styles.form}>
+        <div className={`shortCol revealRight `}>
+          <form
+            className={styles.form}
+            action="https://formsubmit.io/send/pompeczka17@gmail.com"
+            method="POST"
+          >
             <label className={styles.label}>Name</label>
-            <input className={styles.input} placeholder="Your name..." />
-            <label className={styles.label}>Mail</label>
+            <input
+              className={styles.input}
+              name="name"
+              placeholder="Your name..."
+            />
+            <label className={styles.label} type="email" name="mail">
+              Mail
+            </label>
             <input className={styles.input} placeholder="Your mail..." />
             <label className={styles.label}>Message</label>
             <textarea
               className={styles.input}
+              name="message"
               placeholder="Your message goes here..."
             />
-            <button className={` btnPrimary ${styles.btn}`}>
-              <AiOutlineSend className={styles.btnIcon} size={16} /> Wyślij
+            <button className={` btnPrimary ${styles.btn}`} type="submit">
+              Wyślij
             </button>
           </form>
         </div>

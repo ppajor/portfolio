@@ -1,9 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
+import { FaBrain, FaUser, FaPhoneAlt, FaMagic } from "react-icons/fa"
+import { HiOutlineMenuAlt3 } from "react-icons/hi"
+
 import * as styles from "./nav.module.css"
 import Logo from "../../assets/svg/nav-logo.svg"
-import { FaBrain, FaUser, FaPhoneAlt, FaMagic } from "react-icons/fa"
-import { BsGearFill } from "react-icons/bs"
-import { HiOutlineMenuAlt3 } from "react-icons/hi"
 
 function Nav({ navRef, ...props }) {
   const hamburgerOnClick = () => {
@@ -16,21 +17,21 @@ function Nav({ navRef, ...props }) {
         <Logo />
       </div>
       <ul className={styles.ul}>
-        <li className={styles.li}>
-          <FaBrain className={styles.icon} color="#4C1560" />
+        <Link to="#projectsSection" className={`link ${styles.li}`}>
+          <FaBrain className={`iconProjects ${styles.icon}`} />
           Projekty
-        </li>
-        <li className={styles.li}>
-          <FaUser className={styles.icon} color="#D73838" />O mnie
-        </li>
-        <li className={styles.li}>
-          <FaMagic className={styles.icon} color="#21861F" />
+        </Link>
+        <Link to="#aboutSection" className={`link ${styles.li}`}>
+          <FaUser className={` iconAboutMe ${styles.icon}`} />O mnie
+        </Link>
+        <Link to="#skillsSection" className={`link ${styles.li}`}>
+          <FaMagic className={`iconSkills ${styles.icon}`} />
           Umiejętności
-        </li>
-        <li className={styles.li}>
-          <FaPhoneAlt className={styles.icon} color="#F46A05" />
+        </Link>
+        <Link to="#contactSection" className={`link ${styles.li}`}>
+          <FaPhoneAlt className={`iconContact ${styles.icon}`} />
           Kontakt
-        </li>
+        </Link>
       </ul>
       <div
         className={styles.hamburgerMenuContainer}

@@ -1,11 +1,11 @@
 import React from "react"
 import * as styles from "./about.module.css"
-import av from "../../assets/img/cv-foto.jpg"
+import av from "../../assets/img/cv-foto2.jpg"
 
 function About() {
   return (
-    <div className="customContainer">
-      <h3 className={`sectionHeader revealTop ${styles.headerRed}`}>O mnie</h3>
+    <div id="aboutSection" className="customContainer">
+      <h3 className={`sectionHeader revealTop ${styles.headerRed}`}>O MNIE</h3>
       <div className={styles.container}>
         <div className={`revealLeft ${styles.aboutImgContainer}`}>
           <img className={` ${styles.img}`} src={av} alt="av" />

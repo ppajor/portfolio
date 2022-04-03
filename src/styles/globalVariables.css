@@ -14,8 +14,10 @@
   --marginContainer: 125px;
   --marginSectionHeader: 64px;
   --spaceBetweenColumns: 100px;
-  --navHeight: 12vh;
+
+  --navHeight: 112px;
   --headerColor: rgba(32, 32, 32, 0.9);
   --line-height-1: 200%;
+  --line-height-header: 150%;
   --letter-spacing-1: 0.025em;
 }
