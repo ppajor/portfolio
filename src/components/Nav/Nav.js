@@ -4,7 +4,7 @@ import { FaBrain, FaUser, FaPhoneAlt, FaMagic } from "react-icons/fa"
 import { HiOutlineMenuAlt3 } from "react-icons/hi"
 
 import * as styles from "./nav.module.css"
-import Logo from "../../assets/svg/pawcio_logo.svg"
+import Logo from "../../assets/svg/nowe_logo.svg"
 
 function Nav({ navRef, ...props }) {
   const hamburgerOnClick = () => {
