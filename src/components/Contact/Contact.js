@@ -6,7 +6,7 @@ import * as styles from "./contact.module.css"
 
 function Contact() {
   return (
-    <div id="#contactSection" className="customContainer">
+    <div id="contactSection" className="customContainer">
       <h3 className={`sectionHeader revealTop ${styles.headerOrange}`}>
         KONTAKT
       </h3>
