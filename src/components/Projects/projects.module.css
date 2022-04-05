@@ -77,7 +77,43 @@
 }
 
 .projectContainerBtn {
+  background: #161414;
+  box-shadow: 2px 3px 16px rgba(213, 213, 213, 0.5);
   margin-left: auto;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.githubLogo {
+  margin-right: 8px;
+}
+
+.sliderNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 54px;
+}
+
+.sliderCircle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: var(--halfPurple);
+}
+
+.sliderCircle:hover {
+  background-color: var(--purple);
+}
+
+.sliderCircleActive {
+  background-color: var(--purple);
 }
 
 @media screen and (max-width: 1090px) {

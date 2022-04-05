@@ -1,6 +1,7 @@
 import React from "react"
 import * as styles from "./about.module.css"
 import av from "../../assets/img/cv-foto2.jpg"
+import { Link } from "gatsby"
 
 function About() {
   return (
@@ -22,9 +23,11 @@ function About() {
             at donec blandit. Amet sit eget venenatis felis, quis in. Vitae
             donec aliquet vitae pretium.
           </p>
-          <button className={`btnPrimary ${styles.contactBtn}`}>
-            Skontaktuj się ze mną!
-          </button>
+          <Link to="#contactSection" className="link">
+            <button className={`btnPrimary ${styles.contactBtn}`}>
+              Skontaktuj się ze mną!
+            </button>
+          </Link>
         </div>
       </div>
     </div>
