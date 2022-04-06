@@ -36,7 +36,7 @@ function Hero({
   }, [])
   return (
     <div id="heroSection" className={styles.hero}>
-      <section className={styles.leftSection}>
+      <section className={`revealLeft ${styles.leftSection}`}>
         <div ref={headerRef}>
           <Typed
             className={styles.heroHeader}
@@ -60,7 +60,7 @@ function Hero({
           Paweł Pajor
         </p>
       </section>
-      <section className={styles.rightSection} ref={svgRef}>
+      <section className={`revealRight ${styles.rightSection}`} ref={svgRef}>
         <StaticImage
           src="../../assets/img/ja.jpg"
           alt="ja"
