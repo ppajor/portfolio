@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react"
 import { BsGithub } from "react-icons/bs"
 
 import * as styles from "./projects.module.css"
-import mockupBooking from "../../assets/img/mockup-booking.png"
 
 function ProjectBox({ description, img, link, name, technologies }) {
   return (
     <>
       <article className={`revealLeft ${styles.project}`}>
         <div className={styles.mockupContainer}>
-          <img src={mockupBooking} alt="mockup" />
+          <img className={styles.mockupImg} src={img} alt="mockup" />
         </div>
         <div className={styles.projectContentContainer}>
           <h2 className={styles.projectContentHeader}>{name}</h2>

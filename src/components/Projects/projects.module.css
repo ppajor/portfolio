@@ -35,10 +35,19 @@
 }
 
 .mockupContainer {
+  position: relative;
   width: 35%;
+  max-height: 350px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.mockupImg {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
 }
 
 .projectContentContainer {

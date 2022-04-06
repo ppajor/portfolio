@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "./about.module.css"
 import av from "../../assets/img/cv-foto2.jpg"
 import { Link } from "gatsby"
@@ -9,7 +10,12 @@ function About() {
       <h3 className={`sectionHeader revealTop ${styles.headerRed}`}>O MNIE</h3>
       <div className={styles.container}>
         <div className={`revealLeft ${styles.aboutImgContainer}`}>
-          <img className={` ${styles.img}`} src={av} alt="av" />
+          <StaticImage
+            className={` ${styles.img}`}
+            src="../../assets/img/cv-foto2.jpg"
+            placeholder="blurred"
+            alt="av"
+          />
         </div>
         <div className={`revealRight ${styles.aboutContentContainer}`}>
           <h2 className={styles.aboutHeader}>Cześć! Jestem Paweł! :)</h2>

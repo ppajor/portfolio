@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { HiX } from "react-icons/hi"
 
 import * as styles from "../styles/index.module.css"
-import SmoothScroll from "../components/SmoothScroll"
-import logoXD from "../assets/logoXD.png"
 import Nav from "../components/Nav/Nav"
 import Hero from "../components/Hero/Hero"
 import NavMobile from "../components/NavMobile/NavMobile"
@@ -19,7 +17,6 @@ export default function Home() {
   const [typingStopped, setTypingStopped] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const animation = useRef()
   const navRef = useRef()
   const headerRef = useRef()
   const pRef = useRef()
@@ -84,26 +81,11 @@ export default function Home() {
 
     var tl = gsap.timeline()
 
-    tl.to(animation.current, {
-      top: window.innerHeight,
-      duration: 1,
-      delay: 0.2,
-      ease: "power3.in",
-    })
-
     tl.from(navRef.current, {
       yPercent: -100,
       duration: 0.75,
       ease: "power2.in",
     })
-
-    tl.to(
-      animation.current,
-      {
-        display: "none",
-      },
-      "<"
-    )
 
     tl.from(headerRef.current, {
       onComplete: () => {
@@ -144,7 +126,7 @@ export default function Home() {
 
     tl.from(svgRef.current, {
       opacity: 0,
-      duration: 1,
+      duration: 0.75,
       ease: "power2.in",
     })
 
@@ -158,13 +140,6 @@ export default function Home() {
 
   return (
     <>
-      <div
-        className={styles.animationContainer}
-        id="animationPage"
-        ref={animation}
-      >
-        <img className={styles.img} src={logoXD} alt="logo" />
-      </div>
       <div className={styles.mainContainer}>
         <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
         <Hero

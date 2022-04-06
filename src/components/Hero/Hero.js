@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
@@ -60,27 +61,44 @@ function Hero({
         </p>
       </section>
       <section className={styles.rightSection} ref={svgRef}>
-        <img className={styles.imgMe} src={ja} />
+        <StaticImage
+          src="../../assets/img/ja.jpg"
+          alt="ja"
+          placeholder="blurred"
+          className={styles.imgMe}
+        />
+
         <div className={styles.redEclipse}>
           <MouseParallaxContainer className={styles.eclipseContainer}>
             <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <img className={styles.eclipse} src={red} alt="red eclipse" />
+              <StaticImage
+                className={styles.eclipse}
+                src="../../assets/img/red.png"
+                placeholder="blurred"
+                alt="red eclipse"
+              />
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </div>
         <div className={styles.greenEclipse}>
           <MouseParallaxContainer className={styles.eclipseContainer}>
             <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <img className={styles.eclipse} src={green} alt="green eclipse" />
+              <StaticImage
+                className={styles.eclipse}
+                src="../../assets/img/green.png"
+                placeholder="blurred"
+                alt="green eclipse"
+              />
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </div>
         <div className={styles.purpleEclipse}>
           <MouseParallaxContainer className={styles.eclipseContainer}>
             <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <img
+              <StaticImage
                 className={styles.eclipse}
-                src={purple}
+                src="../../assets/img/purple.png"
+                placeholder="blurred"
                 alt="purple eclipse"
               />
             </MouseParallaxChild>
@@ -89,9 +107,10 @@ function Hero({
         <div className={styles.orangeEclipse}>
           <MouseParallaxContainer className={styles.eclipseContainer}>
             <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <img
+              <StaticImage
                 className={styles.eclipse}
-                src={orange}
+                src="../../assets/img/orange.png"
+                placeholder="blurred"
                 alt="orange eclipse"
               />
             </MouseParallaxChild>

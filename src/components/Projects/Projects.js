@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import * as styles from "./projects.module.css"
 import ProjectBox from "./ProjectBox"
 import NavigationCircle from "./NavigationCircle"
+import mockupBooking from "../../assets/img/mockup-booking.png"
+import mockupMissYou from "../../assets/img/mockup-missyouapp.png"
+import mockupIPTracker from "../../assets/img/mockup-ipaddress.png"
+import mockupSuprai from "../../assets/img/mockup-suprai.png"
+import mockupPortfolio from "../../assets/img/mockup-portfolio.png"
 
 function Projects() {
   const [projectID, setProjectID] = useState(0)
@@ -24,7 +29,7 @@ function Projects() {
       </div>
       <ProjectBox
         name={projects[projectID].name}
-        img={projects[projectID].imgName}
+        img={projects[projectID].img}
         description={projects[projectID].desc}
         technologies={projects[projectID].technologies}
         link={projects[projectID].link}
@@ -34,6 +39,7 @@ function Projects() {
           if (el.id - 1 == projectID) {
             return (
               <NavigationCircle
+                key={el.id}
                 active={true}
                 handleOnClick={() => setProjectID(el.id - 1)}
               />
@@ -41,6 +47,7 @@ function Projects() {
           } else {
             return (
               <NavigationCircle
+                key={el.id}
                 active={false}
                 handleOnClick={() => setProjectID(el.id - 1)}
               />
@@ -58,43 +65,31 @@ const projects = [
   {
     id: 1,
     name: "Booking",
-    imgName: "mockup-booking",
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-    mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-    lectus enim. In vulputate vel varius elit mauris duis integer cras
-    commodo. Vel duis accumsan adipiscing donec eu integer metus
-    gravida. Sit adipiscing non condimentum ornare netus vitae tortor,
-    semper`,
-    technologies: "react native, firebase, node.js, npm",
+    img: mockupBooking,
+    desc: `Mobile application for android platform created to store information about books read by a certain user. App can create statistics and store user's friends information.`,
+    technologies: "react native, expo, firebase, node.js, npm, api",
     link: "https://github.com/ppajor/BooKing",
   },
   {
     id: 2,
     name: "MissYou App",
-    imgName: "mockup-missyouapp",
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-    mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-    lectus enim. In vulputate vel varius elit mauris duis integer cras
-    commodo.`,
+    img: mockupMissYou,
+    desc: `Application for android platform made for lovers living far away from each other. Main functionality is to attach partner nickname to an account and use this information to send notifications clicking big red heart on main screen or emoji in Humour Detector to partner's phone..`,
     technologies: "react native, firebase, node.js, npm",
     link: "https://github.com/ppajor/MissYouApp",
   },
   {
     id: 3,
     name: "IP Address Tracker",
-    imgName: "mockup-missyouapp",
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-    mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-    lectus enim. In vulputate vel varius elit mauris duis integer cras
-    commodo. In vulputate vel varius elit mauris duis integer cras
-    commodo.`,
+    img: mockupIPTracker,
+    desc: `Responsive website used for tracking IP addresses`,
     technologies: "html, css, js, api",
     link: "https://github.com/ppajor/IP-Address-Tracker",
   },
   {
     id: 4,
     name: "SuprAI",
-    imgName: "mockup-missyouapp",
+    img: mockupSuprai,
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
     mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
     lectus enim. In vulputate vel varius elit mauris duis integer cras
@@ -106,7 +101,7 @@ const projects = [
   {
     id: 5,
     name: "Portfolio",
-    imgName: "mockup-missyouapp",
+    img: mockupPortfolio,
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
     mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
     lectus enim. In vulputate vel varius elit mauris duis integer cras
