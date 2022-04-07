@@ -100,7 +100,7 @@ const projects = [
     commodo. In vulputate vel varius elit mauris duis integer cras
     commodo.`,
     technologies: "html, css, bootstrap",
-    link: "https://github.com/ppajor/MissYouApp",
+    link: "https://github.com/ppajor/Company-landing-page",
     mobile: false,
   },
   {
@@ -113,7 +113,7 @@ const projects = [
     commodo. In vulputate vel varius elit mauris duis integer cras
     commodo.`,
     technologies: "gatsby, css modules",
-    link: "https://github.com/ppajor/MissYouApp",
+    link: "https://github.com/ppajor/portfolio",
     mobile: false,
   },
 ]
