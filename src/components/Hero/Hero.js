@@ -25,7 +25,7 @@ function Hero({
   signatureRef,
   typingAnimationStopped,
 }) {
-  console.log("animation stop:", typingAnimationStopped)
+  console.log("width:", window.innerWidth)
 
   const animationContainer = useRef()
   useEffect(() => {
@@ -43,6 +43,7 @@ function Hero({
             strings={["Frontend developer"]}
             typeSpeed={20}
             stopped={false}
+            startDelay={1200}
           />
         </div>
         <p className={styles.heroParagraph} ref={paragraphRef}>
@@ -67,54 +68,63 @@ function Hero({
           placeholder="blurred"
           className={styles.imgMe}
         />
-
-        <div className={styles.redEclipse}>
-          <MouseParallaxContainer className={styles.eclipseContainer}>
-            <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <StaticImage
-                className={styles.eclipse}
-                src="../../assets/img/red.png"
-                placeholder="blurred"
-                alt="red eclipse"
-              />
-            </MouseParallaxChild>
-          </MouseParallaxContainer>
-        </div>
-        <div className={styles.greenEclipse}>
-          <MouseParallaxContainer className={styles.eclipseContainer}>
-            <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <StaticImage
-                className={styles.eclipse}
-                src="../../assets/img/green.png"
-                placeholder="blurred"
-                alt="green eclipse"
-              />
-            </MouseParallaxChild>
-          </MouseParallaxContainer>
-        </div>
-        <div className={styles.purpleEclipse}>
-          <MouseParallaxContainer className={styles.eclipseContainer}>
-            <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <StaticImage
-                className={styles.eclipse}
-                src="../../assets/img/purple.png"
-                placeholder="blurred"
-                alt="purple eclipse"
-              />
-            </MouseParallaxChild>
-          </MouseParallaxContainer>
-        </div>
-        <div className={styles.orangeEclipse}>
-          <MouseParallaxContainer className={styles.eclipseContainer}>
-            <MouseParallaxChild factorX={0.05} factorY={0.07}>
-              <StaticImage
-                className={styles.eclipse}
-                src="../../assets/img/orange.png"
-                placeholder="blurred"
-                alt="orange eclipse"
-              />
-            </MouseParallaxChild>
-          </MouseParallaxContainer>
+        <div className={styles.eclipsesWrapper}>
+          <div className={styles.redEclipse}>
+            <MouseParallaxContainer
+              className={`${styles.redEclipseContainer} ${styles.eclipseContainer}`}
+            >
+              <MouseParallaxChild factorX={0.05} factorY={0.07}>
+                <StaticImage
+                  className={styles.eclipse}
+                  src="../../assets/img/red.png"
+                  placeholder="blurred"
+                  alt="red eclipse"
+                />
+              </MouseParallaxChild>
+            </MouseParallaxContainer>
+          </div>
+          <div className={styles.greenEclipse}>
+            <MouseParallaxContainer
+              className={`${styles.greenEclipseContainer} ${styles.eclipseContainer}`}
+            >
+              <MouseParallaxChild factorX={0.05} factorY={0.07}>
+                <StaticImage
+                  className={styles.eclipse}
+                  src="../../assets/img/green.png"
+                  placeholder="blurred"
+                  alt="green eclipse"
+                />
+              </MouseParallaxChild>
+            </MouseParallaxContainer>
+          </div>
+          <div className={styles.purpleEclipse}>
+            <MouseParallaxContainer
+              className={`${styles.purpleEclipseContainer} ${styles.eclipseContainer}`}
+            >
+              <MouseParallaxChild factorX={0.05} factorY={0.07}>
+                <StaticImage
+                  className={styles.eclipse}
+                  src="../../assets/img/purple.png"
+                  placeholder="blurred"
+                  alt="purple eclipse"
+                />
+              </MouseParallaxChild>
+            </MouseParallaxContainer>
+          </div>
+          <div className={styles.orangeEclipse}>
+            <MouseParallaxContainer
+              className={`${styles.orangeEclipseContainer} ${styles.eclipseContainer}`}
+            >
+              <MouseParallaxChild factorX={0.05} factorY={0.07}>
+                <StaticImage
+                  className={styles.eclipse}
+                  src="../../assets/img/orange.png"
+                  placeholder="blurred"
+                  alt="orange eclipse"
+                />
+              </MouseParallaxChild>
+            </MouseParallaxContainer>
+          </div>
         </div>
       </section>
       <div className={styles.scrollAnimationContainer} ref={arrowRef}>

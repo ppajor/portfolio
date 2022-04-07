@@ -79,21 +79,22 @@
   display: flex;
   justify-content: center;
   padding: 50px;
-
-  /*
-  margin-left: 5%;
-  padding-left: 5%;
-
-  background-image: url("../../assets/img/background-rightsection.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  */
 }
 
 .imgMe {
+  position: absolute;
+  width: 300px;
+  height: 425px;
+  padding-top: 16px;
+  object-fit: contain;
+}
+
+.eclipsesWrapper {
   width: 300px;
   height: 400px;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .eclipseContainer {
@@ -102,26 +103,42 @@
 
 .redEclipse {
   position: absolute;
-  top: 15%;
-  left: 23%;
+}
+
+.redEclipseContainer {
+  position: relative;
+  bottom: 5em;
+  right: 75%;
 }
 
 .greenEclipse {
   position: absolute;
-  top: 60%;
-  left: 15%;
+}
+
+.greenEclipseContainer {
+  position: relative;
+  top: 15em;
+  right: 65%;
 }
 
 .purpleEclipse {
   position: absolute;
-  top: 0%;
-  left: 60%;
+}
+
+.purpleEclipseContainer {
+  position: relative;
+  bottom: 10em;
+  left: 90%;
 }
 
 .orangeEclipse {
   position: absolute;
-  top: 55%;
-  left: 70%;
+}
+
+.orangeEclipseContainer {
+  position: relative;
+  top: 10em;
+  left: 155%;
 }
 
 .scrollAnimationContainer {
@@ -137,13 +154,8 @@
   width: 96px;
   height: auto;
 }
-/*
-.scrollAnimationP {
-  font-weight: 300;
-  color: #d9d9d9;
-}
-*/
 
+/*media queries*/
 @media screen and (max-width: 1187px) {
   .heroHeader:before {
     width: var(--pseudo-element-width-sm) !important;
@@ -189,6 +201,30 @@
     height: auto;
   }
 
+  .redEclipseContainer {
+    position: relative;
+    bottom: 5em;
+    right: 65%;
+  }
+
+  .greenEclipseContainer {
+    position: relative;
+    top: 11em;
+    right: 45%;
+  }
+
+  .purpleEclipseContainer {
+    position: relative;
+    bottom: 10em;
+    left: 90%;
+  }
+
+  .orangeEclipseContainer {
+    position: relative;
+    top: 10em;
+    left: 115%;
+  }
+
   .scrollAnimationContainer {
     left: 0;
   }
@@ -210,40 +246,39 @@
     width: var(--pseudo-element-width-sm) !important;
   }
 
+  .rightSection {
+    display: none;
+  }
+
   .imgMe {
     width: 200px;
     height: auto;
   }
 
   .eclipse {
-    width: 75%;
+    width: 65%;
     height: auto;
   }
-
-  .redEclipse {
-    position: absolute;
-    top: 18%;
-    left: 15%;
-    transform: scale(0.85);
+  .eclipsesWrapper {
+    background-image: url("../../assets/img/eclipses-bg.png");
+    background-position: center;
+    background-size: cover;
   }
 
-  .greenEclipse {
-    position: absolute;
-    top: 70%;
-    left: 0%;
-    transform: scale(0.75);
+  .redEclipseContainer {
+    display: none;
   }
 
-  .purpleEclipse {
-    position: absolute;
-    top: 0%;
-    left: 60%;
+  .greenEclipseContainer {
+    display: none;
   }
 
-  .orangeEclipse {
-    position: absolute;
-    top: 55%;
-    left: 70%;
+  .purpleEclipseContainer {
+    display: none;
+  }
+
+  .orangeEclipseContainer {
+    display: none;
   }
 }
 
