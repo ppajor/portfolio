@@ -25,8 +25,6 @@ function Hero({
   signatureRef,
   typingAnimationStopped,
 }) {
-  console.log("width:", window.innerWidth)
-
   const animationContainer = useRef()
   useEffect(() => {
     lottie.loadAnimation({
