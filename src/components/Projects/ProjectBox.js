@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { BsGithub } from "react-icons/bs"
 
 import * as styles from "./projects.module.css"
 
-function ProjectBox({ description, img, link, name, technologies }) {
+function ProjectBox({ description, img, isMobile, link, name, technologies }) {
   return (
     <>
       <article className={`revealLeft ${styles.project}`}>
         <div className={styles.mockupContainer}>
-          <img className={styles.mockupImg} src={img} alt="mockup" />
+          {isMobile ? (
+            <img className={styles.mockupImgMobile} src={img} alt="mockup" />
+          ) : (
+            <img className={styles.mockupImgDesktop} src={img} alt="mockup" />
+          )}
         </div>
         <div className={styles.projectContentContainer}>
           <h2 className={styles.projectContentHeader}>{name}</h2>

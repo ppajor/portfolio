@@ -36,7 +36,7 @@ export default function Home() {
           trigger: item,
         },
         y: -100,
-        duration: 1.5,
+        duration: 2,
         delay: 0.2,
         markers: true,
         start: "top top",
@@ -52,7 +52,7 @@ export default function Home() {
           trigger: item,
         },
         x: -30,
-        duration: 1.5,
+        duration: 2,
         delay: 0.2,
 
         markers: true,
@@ -69,7 +69,7 @@ export default function Home() {
           trigger: item,
         },
         x: 30,
-        duration: 1.5,
+        duration: 2,
         delay: 0.2,
 
         markers: true,
@@ -77,6 +77,64 @@ export default function Home() {
         ease: "power3.out",
         opacity: 0,
       })
+    })
+
+    var tl = gsap.timeline()
+
+    tl.from(navRef.current, {
+      yPercent: -100,
+      duration: 0.75,
+      ease: "power2.in",
+    })
+
+    tl.from(headerRef.current, {
+      onComplete: () => {
+        setTypingStopped(false)
+      },
+      duration: 1,
+      xPercent: -10,
+      opacity: 0,
+      ease: "power2.in",
+    })
+
+    tl.from(
+      pRef.current,
+      {
+        duration: 0.75,
+        xPercent: -10,
+        opacity: 0,
+        ease: "power2.in",
+      },
+      "<"
+    )
+
+    tl.from(
+      signatureRef.current,
+      {
+        duration: 0.75,
+        xPercent: -10,
+        opacity: 0,
+        ease: "power2.in",
+      },
+      "<"
+    )
+
+    tl.from(headerRef.current, {
+      "--pseudo-element-width": 0,
+      duration: 0.5,
+    })
+
+    tl.from(svgRef.current, {
+      opacity: 0,
+      duration: 0.75,
+      ease: "power2.in",
+    })
+
+    tl.from(arrow.current, {
+      opacity: 0,
+      duration: 0.2,
+      yPercent: -5,
+      ease: "power2.in",
     })
   }, [])
 

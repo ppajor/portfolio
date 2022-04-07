@@ -33,6 +33,7 @@ function Projects() {
         description={projects[projectID].desc}
         technologies={projects[projectID].technologies}
         link={projects[projectID].link}
+        isMobile={projects[projectID].mobile}
       />
       <div className={styles.sliderNavigation}>
         {projects.map(el => {
@@ -69,6 +70,7 @@ const projects = [
     desc: `Mobile application for android platform created to store information about books read by a certain user. App can create statistics and store user's friends information.`,
     technologies: "react native, expo, firebase, node.js, npm, api",
     link: "https://github.com/ppajor/BooKing",
+    mobile: true,
   },
   {
     id: 2,
@@ -77,6 +79,7 @@ const projects = [
     desc: `Application for android platform made for lovers living far away from each other. Main functionality is to attach partner nickname to an account and use this information to send notifications clicking big red heart on main screen or emoji in Humour Detector to partner's phone..`,
     technologies: "react native, firebase, node.js, npm",
     link: "https://github.com/ppajor/MissYouApp",
+    mobile: "true",
   },
   {
     id: 3,
@@ -85,6 +88,7 @@ const projects = [
     desc: `Responsive website used for tracking IP addresses`,
     technologies: "html, css, js, api",
     link: "https://github.com/ppajor/IP-Address-Tracker",
+    mobile: false,
   },
   {
     id: 4,
@@ -97,6 +101,7 @@ const projects = [
     commodo.`,
     technologies: "html, css, bootstrap",
     link: "https://github.com/ppajor/MissYouApp",
+    mobile: false,
   },
   {
     id: 5,
@@ -109,5 +114,6 @@ const projects = [
     commodo.`,
     technologies: "gatsby, css modules",
     link: "https://github.com/ppajor/MissYouApp",
+    mobile: false,
   },
 ]

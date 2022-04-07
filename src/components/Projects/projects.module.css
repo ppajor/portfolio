@@ -40,14 +40,19 @@
   max-height: 350px;
   display: flex;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
-.mockupImg {
+.mockupImgMobile {
   max-width: 100%;
   height: auto;
   max-height: 300px;
+}
+
+.mockupImgDesktop {
+  max-width: 100%;
+  width: 375px;
+  object-fit: contain;
+  height: auto;
 }
 
 .projectContentContainer {
@@ -140,8 +145,8 @@
 
   .project {
     flex-direction: column;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .mockupContainer {
