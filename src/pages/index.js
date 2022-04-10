@@ -24,11 +24,10 @@ export default function Home() {
   const signatureRef = useRef()
   const arrow = useRef()
 
-  gsap.registerPlugin(ScrollTrigger)
-
   console.log("menu open", menuOpen)
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     const topTriggers = gsap.utils.toArray(".revealTop")
     topTriggers.forEach(item => {
       gsap.from(item, {
@@ -38,8 +37,6 @@ export default function Home() {
         y: -100,
         duration: 2,
         delay: 0.2,
-        markers: true,
-        start: "top top",
         ease: "power3.out",
         opacity: 0,
       })
@@ -54,9 +51,6 @@ export default function Home() {
         x: -30,
         duration: 2,
         delay: 0.2,
-
-        markers: true,
-        start: "top top",
         ease: "power3.out",
         opacity: 0,
       })
@@ -72,8 +66,6 @@ export default function Home() {
         duration: 2,
         delay: 0.2,
 
-        markers: true,
-        start: "top top",
         ease: "power3.out",
         opacity: 0,
       })
