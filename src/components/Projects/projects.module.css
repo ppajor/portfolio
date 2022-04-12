@@ -25,6 +25,8 @@
 .project {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 400px;
   margin-top: 160px;
   padding-right: 64px;
   padding-top: 48px;
@@ -40,6 +42,7 @@
   max-height: 350px;
   display: flex;
   justify-content: center;
+  margin-right: 5%;
 }
 
 .mockupImgMobile {
@@ -147,10 +150,12 @@
     flex-direction: column;
     padding-left: 16px;
     padding-right: 16px;
+    height: 850px;
   }
 
   .mockupContainer {
     width: 100%;
+    margin-right: 0;
   }
 
   .projectContentContainer {

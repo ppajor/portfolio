@@ -132,7 +132,7 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.mainContainer}>
+      <div id="root" className={styles.mainContainer}>
         <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
         <Hero
           headerRef={headerRef}

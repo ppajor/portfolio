@@ -16,6 +16,7 @@ import purple from "../../assets/img/purple.png"
 import red from "../../assets/img/red.png"
 import animation from "../../assets/lottie/arrow-down.json"
 import ja from "../../assets/img/ja.jpg"
+import { Link } from "gatsby"
 
 function Hero({
   arrowRef,
@@ -125,9 +126,13 @@ function Hero({
           </div>
         </div>
       </section>
-      <div className={styles.scrollAnimationContainer} ref={arrowRef}>
+      <Link
+        to="#projectsSection"
+        className={`link ${styles.scrollAnimationContainer}`}
+        ref={arrowRef}
+      >
         <div className={styles.scrollAnimation} ref={animationContainer}></div>
-      </div>
+      </Link>
     </div>
   )
 }
