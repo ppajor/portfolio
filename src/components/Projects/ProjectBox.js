@@ -7,7 +7,7 @@ import * as styles from "./projects.module.css"
 function ProjectBox({ description, img, isMobile, link, name, technologies }) {
   return (
     <>
-      <article className={`revealLeft ${styles.project}`}>
+      <article id="projectBox" className={`revealLeft ${styles.project}`}>
         <div className={styles.mockupContainer}>
           {isMobile ? (
             <img className={styles.mockupImgMobile} src={img} alt="mockup" />

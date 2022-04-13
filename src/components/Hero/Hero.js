@@ -9,23 +9,10 @@ import lottie from "lottie-web"
 import { FaQuoteLeft } from "react-icons/fa"
 
 import * as styles from "./hero.module.css"
-import eclipses from "../../assets/img/eclipses.png"
-import green from "../../assets/img/green.png"
-import orange from "../../assets/img/orange.png"
-import purple from "../../assets/img/purple.png"
-import red from "../../assets/img/red.png"
 import animation from "../../assets/lottie/arrow-down.json"
-import ja from "../../assets/img/ja.jpg"
 import { Link } from "gatsby"
 
-function Hero({
-  arrowRef,
-  headerRef,
-  paragraphRef,
-  svgRef,
-  signatureRef,
-  typingAnimationStopped,
-}) {
+function Hero({ arrowRef, headerRef, paragraphRef, svgRef, signatureRef }) {
   const animationContainer = useRef()
   useEffect(() => {
     lottie.loadAnimation({

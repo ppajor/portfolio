@@ -80,8 +80,9 @@
 }
 
 .projectContentTechnologies {
-  width: 100%;
-  margin-bottom: 24px;
+  position: absolute;
+  bottom: 132px;
+
   line-height: var(--line-height-1);
   font-weight: 600;
   color: rgba(0, 0, 0, 0.9);
@@ -100,6 +101,9 @@
 }
 
 .link {
+  position: absolute;
+  bottom: 64px;
+  right: 64px;
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -150,7 +154,7 @@
     flex-direction: column;
     padding-left: 16px;
     padding-right: 16px;
-    height: 850px;
+    height: fit-content;
   }
 
   .mockupContainer {

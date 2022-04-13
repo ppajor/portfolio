@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { Link } from "gatsby"
 import * as styles from "./projects.module.css"
 import ProjectBox from "./ProjectBox"
 import NavigationCircle from "./NavigationCircle"
@@ -40,16 +40,16 @@ function Projects() {
           if (el.id - 1 == projectID) {
             return (
               <NavigationCircle
-                key={el.id}
                 active={true}
+                key={el.id}
                 handleOnClick={() => setProjectID(el.id - 1)}
               />
             )
           } else {
             return (
               <NavigationCircle
-                key={el.id}
                 active={false}
+                key={el.id}
                 handleOnClick={() => setProjectID(el.id - 1)}
               />
             )
@@ -76,7 +76,7 @@ const projects = [
     id: 2,
     name: "MissYou App",
     img: mockupMissYou,
-    desc: `Application for android platform made for lovers living far away from each other. Main functionality is to attach partner nickname to an account and use this information to send notifications clicking big red heart on main screen or emoji in Humour Detector to partner's phone..`,
+    desc: `Application for android platform made for lovers living far away from each other. `,
     technologies: "react native, firebase, node.js, npm",
     link: "https://github.com/ppajor/MissYouApp",
     mobile: "true",

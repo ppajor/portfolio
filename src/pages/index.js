@@ -12,8 +12,10 @@ import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import Contact from "../components/Contact/Contact"
 import Footer from "../components/Footer/Footer"
+import Logo from "../assets/svg/nowe_logo.svg"
 
 export default function Home() {
+  const [loading, setLoading] = useState(true)
   const [typingStopped, setTypingStopped] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -23,10 +25,12 @@ export default function Home() {
   const svgRef = useRef()
   const signatureRef = useRef()
   const arrow = useRef()
+  const logoRef = useRef()
 
-  console.log("menu open", menuOpen)
+  console.log("loading", loading)
 
   useEffect(() => {
+    console.log("RERENDER")
     gsap.registerPlugin(ScrollTrigger)
     const topTriggers = gsap.utils.toArray(".revealTop")
     topTriggers.forEach(item => {
@@ -80,9 +84,6 @@ export default function Home() {
     })
 
     tl.from(headerRef.current, {
-      onComplete: () => {
-        setTypingStopped(false)
-      },
       duration: 1,
       xPercent: -10,
       opacity: 0,
@@ -128,39 +129,62 @@ export default function Home() {
       yPercent: -5,
       ease: "power2.in",
     })
+  }, [loading])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  }, [])
+
+  useEffect(() => {
+    gsap.to(logoRef.current, {
+      yPercent: 70,
+      duration: 1,
+      delay: 0.5,
+      ease: "power2.in",
+    })
   }, [])
 
   return (
     <>
-      <div id="root" className={styles.mainContainer}>
-        <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
-        <Hero
-          headerRef={headerRef}
-          paragraphRef={pRef}
-          svgRef={svgRef}
-          signatureRef={signatureRef}
-          arrowRef={arrow}
-          typingAnimationStopped={typingStopped}
-        />
-        {menuOpen && (
-          <div className={styles.mobileNavContainer}>
-            <div
-              className={styles.exitIconContainer}
-              onClick={() =>
-                setMenuOpen(false)
-              } /*sposob na on clicka w divie w reactie*/
-            >
-              <HiX size={32} />
+      {!loading ? (
+        <div id="root" className={styles.mainContainer}>
+          <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
+          <Hero
+            headerRef={headerRef}
+            paragraphRef={pRef}
+            svgRef={svgRef}
+            signatureRef={signatureRef}
+            arrowRef={arrow}
+            typingAnimationStopped={typingStopped}
+          />
+          {menuOpen && (
+            <div className={styles.mobileNavContainer}>
+              <div
+                className={styles.exitIconContainer}
+                onClick={() =>
+                  setMenuOpen(false)
+                } /*sposob na on clicka w divie w reactie*/
+              >
+                <HiX size={32} />
+              </div>
+              <NavMobile clickLink={() => setMenuOpen(false)} />
             </div>
-            <NavMobile clickLink={() => setMenuOpen(false)} />
+          )}
+          <Projects />
+          <About />
+          <Skills />
+          <Contact />
+          <Footer />
+        </div>
+      ) : (
+        <div className={styles.animationContainer}>
+          <div ref={logoRef} className={styles.imgContainer}>
+            <Logo className={styles.img} />
           </div>
-        )}
-        <Projects />
-        <About />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+        </div>
+      )}
     </>
   )
 }

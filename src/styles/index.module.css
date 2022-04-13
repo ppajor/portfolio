@@ -10,9 +10,6 @@
 
 .animationContainer {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -23,10 +20,20 @@
   z-index: 100;
   background: linear-gradient(180deg, #f9f9f9 0%, rgba(249, 249, 249, 0) 100%);
   overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .img {
-  width: 35%;
+  width: 25%;
   height: auto;
 }
 
