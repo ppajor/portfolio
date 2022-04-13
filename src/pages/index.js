@@ -134,14 +134,14 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 1000)
   }, [])
 
   useEffect(() => {
     gsap.to(logoRef.current, {
       yPercent: 70,
-      duration: 1,
-      delay: 0.5,
+      duration: 0.8,
+      delay: 0.2,
       ease: "power2.in",
     })
   }, [])

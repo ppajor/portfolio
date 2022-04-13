@@ -27,6 +27,14 @@
   height: 322px;
 }
 
+.img:after {
+  content: "";
+  background: url("../../assets/img/orange.png"); /*url of image*/
+  height: 16px; /*height of image*/
+  width: 33px; /*width of image*/
+  position: absolute;
+}
+
 .aboutContentContainer {
   width: 60%;
   padding-left: 50px;
