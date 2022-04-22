@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 684px) {
   .nav {
-    min-height: 10vh;
+    min-height: var(--navHeightSm);
   }
   .logo {
     left: var(--paddingContainerSm);

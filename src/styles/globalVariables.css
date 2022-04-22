@@ -16,6 +16,7 @@
   --spaceBetweenColumns: 100px;
 
   --navHeight: 12vh;
+  --navHeightSm: 10vh;
   --headerColor: rgba(32, 32, 32, 0.9);
   --line-height-1: 200%;
   --line-height-header: 150%;

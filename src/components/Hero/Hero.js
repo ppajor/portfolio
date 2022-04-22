@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import {
   MouseParallaxContainer,
@@ -12,9 +12,22 @@ import * as styles from "./hero.module.css"
 import animation from "../../assets/lottie/arrow-down.json"
 import { Link } from "gatsby"
 
-function Hero({ arrowRef, headerRef, paragraphRef, svgRef, signatureRef }) {
+function Hero({
+  arrowRef,
+  headerRef,
+  leftSectionRef,
+  paragraphRef,
+  svgRef,
+  signatureRef,
+}) {
+  const [mobile, setMobile] = useState(null)
+
   const animationContainer = useRef()
+
   useEffect(() => {
+    if (window.innerWidth < 684) {
+      setMobile(true)
+    }
     lottie.loadAnimation({
       container: animationContainer.current,
       animationData: animation,
@@ -22,15 +35,19 @@ function Hero({ arrowRef, headerRef, paragraphRef, svgRef, signatureRef }) {
   }, [])
   return (
     <div id="heroSection" className={styles.hero}>
-      <section className={styles.leftSection}>
+      <section className={styles.leftSection} ref={leftSectionRef}>
         <div ref={headerRef}>
-          <Typed
-            className={styles.heroHeader}
-            strings={["Frontend developer"]}
-            typeSpeed={20}
-            stopped={false}
-            startDelay={1200}
-          />
+          {mobile ? (
+            <h2 className={styles.heroHeader}>Frontend developer</h2>
+          ) : (
+            <Typed
+              className={styles.heroHeader}
+              strings={["Frontend developer"]}
+              typeSpeed={20}
+              stopped={false}
+              startDelay={1200}
+            />
+          )}
         </div>
         <p className={styles.heroParagraph} ref={paragraphRef}>
           <FaQuoteLeft

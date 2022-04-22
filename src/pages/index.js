@@ -20,6 +20,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navRef = useRef()
+  const leftSectionRef = useRef()
   const headerRef = useRef()
   const pRef = useRef()
   const svgRef = useRef()
@@ -32,103 +33,107 @@ export default function Home() {
   useEffect(() => {
     console.log("RERENDER")
     gsap.registerPlugin(ScrollTrigger)
+
     const topTriggers = gsap.utils.toArray(".revealTop")
-    topTriggers.forEach(item => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-        },
-        y: -100,
-        duration: 2,
-        delay: 0.2,
-        ease: "power3.out",
-        opacity: 0,
+    var mql = window.matchMedia("(min-width: 684px)")
+    if (mql.matches) {
+      topTriggers.forEach(item => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+          },
+          y: -100,
+          duration: 2,
+          delay: 0.2,
+          ease: "power3.out",
+          opacity: 0,
+        })
       })
-    })
 
-    const leftTriggers = gsap.utils.toArray(".revealLeft")
-    leftTriggers.forEach(item => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-        },
-        x: -30,
-        duration: 2,
-        delay: 0.2,
-        ease: "power3.out",
-        opacity: 0,
+      const leftTriggers = gsap.utils.toArray(".revealLeft")
+      leftTriggers.forEach(item => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+          },
+          x: -30,
+          duration: 2,
+          delay: 0.2,
+          ease: "power3.out",
+          opacity: 0,
+        })
       })
-    })
 
-    const rightTriggers = gsap.utils.toArray(".revealRight")
-    rightTriggers.forEach(item => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-        },
-        x: 30,
-        duration: 2,
-        delay: 0.2,
+      const rightTriggers = gsap.utils.toArray(".revealRight")
+      rightTriggers.forEach(item => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+          },
+          x: 30,
+          duration: 2,
+          delay: 0.2,
 
-        ease: "power3.out",
-        opacity: 0,
+          ease: "power3.out",
+          opacity: 0,
+        })
       })
-    })
 
-    var tl = gsap.timeline()
+      var tl = gsap.timeline()
 
-    tl.from(navRef.current, {
-      yPercent: -100,
-      duration: 0.75,
-      ease: "power2.in",
-    })
-
-    tl.from(headerRef.current, {
-      duration: 1,
-      xPercent: -10,
-      opacity: 0,
-      ease: "power2.in",
-    })
-
-    tl.from(
-      pRef.current,
-      {
+      tl.from(navRef.current, {
+        yPercent: -100,
         duration: 0.75,
+        ease: "power2.in",
+      })
+
+      tl.from(headerRef.current, {
+        duration: 1,
         xPercent: -10,
         opacity: 0,
         ease: "power2.in",
-      },
-      "<"
-    )
+      })
 
-    tl.from(
-      signatureRef.current,
-      {
-        duration: 0.75,
-        xPercent: -10,
+      tl.from(
+        pRef.current,
+        {
+          duration: 0.75,
+          xPercent: -10,
+          opacity: 0,
+          ease: "power2.in",
+        },
+        "<"
+      )
+
+      tl.from(
+        signatureRef.current,
+        {
+          duration: 0.75,
+          xPercent: -10,
+          opacity: 0,
+          ease: "power2.in",
+        },
+        "<"
+      )
+
+      tl.from(headerRef.current, {
+        "--pseudo-element-width": 0,
+        duration: 0.5,
+      })
+
+      tl.from(svgRef.current, {
         opacity: 0,
+        duration: 0.75,
         ease: "power2.in",
-      },
-      "<"
-    )
+      })
 
-    tl.from(headerRef.current, {
-      "--pseudo-element-width": 0,
-      duration: 0.5,
-    })
-
-    tl.from(svgRef.current, {
-      opacity: 0,
-      duration: 0.75,
-      ease: "power2.in",
-    })
-
-    tl.from(arrow.current, {
-      opacity: 0,
-      duration: 0.2,
-      yPercent: -5,
-      ease: "power2.in",
-    })
+      tl.from(arrow.current, {
+        opacity: 0,
+        duration: 0.2,
+        yPercent: -5,
+        ease: "power2.in",
+      })
+    }
   }, [loading])
 
   useEffect(() => {
@@ -152,6 +157,7 @@ export default function Home() {
         <div id="root" className={styles.mainContainer}>
           <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
           <Hero
+            leftSectionRef={leftSectionRef}
             headerRef={headerRef}
             paragraphRef={pRef}
             svgRef={svgRef}

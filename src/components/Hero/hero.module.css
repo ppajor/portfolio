@@ -230,10 +230,6 @@
     top: 10em;
     left: 115%;
   }
-
-  .scrollAnimationContainer {
-    bottom: 0vh;
-  }
 }
 
 @media screen and (max-width: 684px) {
@@ -249,7 +245,15 @@
   }
 
   .heroHeader:before {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: var(--pseudo-element-width-sm) !important;
+  }
+
+  .leftSection {
+    padding-top: 48px;
+    margin-top: var(--navHeightSm);
   }
 
   .rightSection {
