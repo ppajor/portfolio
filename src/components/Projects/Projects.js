@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 import * as styles from "./projects.module.css"
 import ProjectBox from "./ProjectBox"
 import NavigationCircle from "./NavigationCircle"
-import mockupBooking from "../../assets/img/mockup-booking.png"
-import mockupMissYou from "../../assets/img/mockup-missyouapp.png"
-import mockupIPTracker from "../../assets/img/mockup-ipaddress.png"
-import mockupSuprai from "../../assets/img/mockup-suprai.png"
-import mockupPortfolio from "../../assets/img/mockup-portfolio.png"
+import mockupBooking from "../../assets/img/mockup-booking-min.png"
+import mockupMissYou from "../../assets/img/mockup-missyouapp-min.png"
+import mockupIPTracker from "../../assets/img/mockup-ipaddress-min.png"
+import mockupSuprai from "../../assets/img/mockup-suprai-min.png"
+import mockupPortfolio from "../../assets/img/mockup-portfolio-min.png"
 
 function Projects() {
   const [projectID, setProjectID] = useState(0)

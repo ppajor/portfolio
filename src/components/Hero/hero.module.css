@@ -246,7 +246,7 @@
 
   .heroHeader:before {
     position: absolute;
-    top: 0;
+    top: 165px;
     left: 0;
     width: var(--pseudo-element-width-sm) !important;
   }
