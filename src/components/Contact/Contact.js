@@ -38,17 +38,17 @@ function Contact() {
             <input
               className={styles.input}
               name="name"
-              placeholder="Imię i nazwisko..."
+              placeholder="Wpisz imię i nazwisko..."
             />
             <label className={styles.label} type="email" name="mail">
               Email
             </label>
-            <input className={styles.input} placeholder="Twój email..." />
+            <input className={styles.input} placeholder="Wpisz email..." />
             <label className={styles.label}>Wiadomość</label>
             <textarea
               className={styles.input}
               name="message"
-              placeholder="Twoja wiadomość..."
+              placeholder="Wpisz wiadomość..."
             />
             <button className={` btnPrimary ${styles.btn}`} type="submit">
               Wyślij
