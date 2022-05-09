@@ -52,7 +52,7 @@
 .heroParagraph {
   width: 100%;
   margin-top: 64px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.75);
   line-height: 2.3;
   letter-spacing: 0.025em;
   will-change: opacity;
@@ -68,9 +68,9 @@
   font-size: 32px;
   line-height: 237.5%;
   letter-spacing: 0.02em;
-  color: rgba(53, 53, 53, 0.75);
+  color: rgba(53, 53, 53, 0.9);
 
-  text-shadow: 0px 4px 2px rgba(165, 164, 164, 0.2);
+  text-shadow: 0px 4px 2px rgba(165, 164, 164, 0.1);
 }
 
 /* right section*/

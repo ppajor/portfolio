@@ -50,15 +50,8 @@ function Hero({
           )}
         </div>
         <p className={styles.heroParagraph} ref={paragraphRef}>
-          <FaQuoteLeft
-            className={styles.quoteIcon}
-            color="rgba(0,0,0,0.5)"
-            size={24}
-          />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac enim
-          donec vitae tortor. At sem enim integer mi accumsan, morbi massa
-          tincidunt non. Diam blandit dignissim sem enim arcu, tellus, fringilla
-          lorem.
+          Tworzę responsywne strony internetowe i aplikacje mobilne
+          wykorzystując najnowsze technologie, dopasowane do Twoich potrzeb.
         </p>
         <p className={styles.heroSignature} ref={signatureRef}>
           Paweł Pajor

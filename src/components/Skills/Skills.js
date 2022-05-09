@@ -28,9 +28,8 @@ function Skills() {
             Technologie których używam
           </h2>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-            mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-            lectus enim.
+            Używanie nowych technologii pomagają tworzyć projekty szybciej oraz
+            umożliwiać lepszą współpracę i komunikację w zespole.
           </p>
         </div>
         <div className={`revealRight shortCol ${styles.technologiesSection}`}>
@@ -87,9 +86,8 @@ function Skills() {
             Narzędzia których używam
           </h2>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-            mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-            lectus enim.
+            Narzędzia potrafią zaoszczędzić wiele czasu programiście, ułatwić
+            pracę oraz pomagać realizować obrane cele.
           </p>
         </div>
       </div>

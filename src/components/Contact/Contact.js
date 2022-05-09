@@ -16,9 +16,8 @@ function Contact() {
             Jak mogę Ci pomóc?
           </h2>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-            mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-            lectus enim
+            Masz zlecenie? Oferujesz pracę, bądź po prostu masz pytanie?
+            Skontaktuj się ze mną! :)
           </p>
           <div className={styles.contactBox}>
             <HiMail className={styles.icon} size={24} />
@@ -35,21 +34,21 @@ function Contact() {
             action="https://formsubmit.io/send/pompeczka17@gmail.com"
             method="POST"
           >
-            <label className={styles.label}>Name</label>
+            <label className={styles.label}>Imię i nazwisko</label>
             <input
               className={styles.input}
               name="name"
-              placeholder="Your name..."
+              placeholder="Imię i nazwisko..."
             />
             <label className={styles.label} type="email" name="mail">
-              Mail
+              Email
             </label>
-            <input className={styles.input} placeholder="Your mail..." />
-            <label className={styles.label}>Message</label>
+            <input className={styles.input} placeholder="Twój email..." />
+            <label className={styles.label}>Wiadomość</label>
             <textarea
               className={styles.input}
               name="message"
-              placeholder="Your message goes here..."
+              placeholder="Twoja wiadomość..."
             />
             <button className={` btnPrimary ${styles.btn}`} type="submit">
               Wyślij

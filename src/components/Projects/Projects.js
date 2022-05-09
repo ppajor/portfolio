@@ -20,11 +20,12 @@ function Projects() {
           Sprawdź moje projekty!
         </h2>
         <p className={`revealRight ${styles.checkParagraph} paragraph`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-          mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-          lectus enim. In vulputate vel varius elit mauris duis integer cras
-          commodo. Vel duis accumsan adipiscing donec eu integer metus gravida.
-          Sit adipiscing non condimentum ornare netus vitae tortor, semper.
+          Poniższe projekty, zostały zrealizowane w 100% przeze mnie i jestem
+          ich pomysłodawcą. Podczas ich tworzenia staram się kłaść nacisk
+          zarówno na funkcjonalności jak i walory estetyczne, by były przyjemne
+          dla oka i przyciągały uwagę użytkowników. Dbałość o szczegóły,
+          estetyka oraz kreatywność to główne cechy jakimi kieruję się przy
+          tworzeniu projektów.
         </p>
       </div>
       <ProjectBox

@@ -20,14 +20,13 @@ function About() {
         <div className={`revealRight ${styles.aboutContentContainer}`}>
           <h2 className={styles.aboutHeader}>Cześć! Jestem Paweł! :)</h2>
           <p className={styles.aboutParagraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut
-            varius interdum posuere porttitor ultricies aliquam scelerisque
-            maecenas. Nibh vel elementum, tincidunt elit tortor justo, in. Id
-            sed fermentum, mauris, quam purus et. Id vestibulum lectus in urna.
-            Nulla sagittis penatibus mi malesuada commodo nulla. Massa et in
-            montes, tristique mauris. Pretium eget ut congue et feugiat euismod
-            at donec blandit. Amet sit eget venenatis felis, quis in. Vitae
-            donec aliquet vitae pretium.
+            Jestem studentem, od kilku lat interesuję się designem, tworzeniem
+            stron internetowych oraz aplikacji mobilnych. Moim celem jest
+            uzyskanie doświadczenia zawodowego i kształtowanie swoich
+            umiejętności technicznych w zakresie Frontend Developmentu. Nie mam
+            problemów z komunikacją w języku angielskim i posiadam wysokie
+            umiejętności interpersonalne. Istotnym elementem pracy jest dla mnie
+            atmosfera w zespole.
           </p>
           <Link to="#contactSection" className="link">
             <button className={`btnPrimary ${styles.contactBtn}`}>
