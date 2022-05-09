@@ -68,7 +68,7 @@ const projects = [
     id: 1,
     name: "Booking",
     img: mockupBooking,
-    desc: `Mobile application for android platform created to store information about books read by a certain user. App can create statistics and store user's friends information.`,
+    desc: `Aplikacja mobilna na platformę android wykonana jest przy pomocy technologii React Native, której głównym celem jest zapisywanie i przechowywanie informacji na temat książek interesujących danego użytkownika. `,
     technologies: "react native, expo, firebase, node.js, npm, api",
     link: "https://github.com/ppajor/BooKing",
     mobile: true,
@@ -77,7 +77,7 @@ const projects = [
     id: 2,
     name: "MissYou App",
     img: mockupMissYou,
-    desc: `Application for android platform made for lovers living far away from each other. `,
+    desc: `Aplikacja mobilna na platformę android stworzona dla zakochanych w związku na odległość `,
     technologies: "react native, firebase, node.js, npm",
     link: "https://github.com/ppajor/MissYouApp",
     mobile: "true",
@@ -86,7 +86,7 @@ const projects = [
     id: 3,
     name: "IP Address Tracker",
     img: mockupIPTracker,
-    desc: `Responsive website used for tracking IP addresses`,
+    desc: `Responsywna strona internetowa pozwalająca na wyszukiwanie kluczowych informacji oraz lokalizacji wpisanego IP bądź adresu domeny. `,
     technologies: "html, css, js, api",
     link: "https://github.com/ppajor/IP-Address-Tracker",
     mobile: false,
@@ -95,11 +95,7 @@ const projects = [
     id: 4,
     name: "SuprAI",
     img: mockupSuprai,
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-    mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-    lectus enim. In vulputate vel varius elit mauris duis integer cras
-    commodo. In vulputate vel varius elit mauris duis integer cras
-    commodo.`,
+    desc: `Responsywna strona internetowa dla firmy, stworzona przy pomocy frameworku Bootstrap.`,
     technologies: "html, css, bootstrap",
     link: "https://github.com/ppajor/Company-landing-page",
     mobile: false,
@@ -108,11 +104,7 @@ const projects = [
     id: 5,
     name: "Portfolio",
     img: mockupPortfolio,
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
-    mattis enim ut dolor laoreet. Risus semper cursus vitae urna quam
-    lectus enim. In vulputate vel varius elit mauris duis integer cras
-    commodo. In vulputate vel varius elit mauris duis integer cras
-    commodo.`,
+    desc: `Projekt aktualnego portfolio.`,
     technologies: "gatsby, css modules",
     link: "https://github.com/ppajor/portfolio",
     mobile: false,

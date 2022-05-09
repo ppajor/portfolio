@@ -28,10 +28,10 @@ export default function Home() {
   const arrow = useRef()
   const logoRef = useRef()
 
-  console.log("loading", loading)
+  //console.log("loading", loading)
 
   useEffect(() => {
-    console.log("RERENDER")
+    //console.log("RERENDER")
     gsap.registerPlugin(ScrollTrigger)
 
     const topTriggers = gsap.utils.toArray(".revealTop")
