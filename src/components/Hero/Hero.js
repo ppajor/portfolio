@@ -1,38 +1,33 @@
-import React, { useEffect, useRef, useState } from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import {
-  MouseParallaxContainer,
-  MouseParallaxChild,
-} from "react-parallax-mouse"
-import Typed from "react-typed"
-import lottie from "lottie-web"
-import { FaQuoteLeft } from "react-icons/fa"
+import React, { useEffect, useRef, useState } from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import Typed from "react-typed";
+import lottie from "lottie-web";
 
-import * as styles from "./hero.module.css"
-import animation from "../../assets/lottie/arrow-down.json"
-import { Link } from "gatsby"
+import * as styles from "./hero.module.css";
+import animation from "../../assets/lottie/arrow-down.json";
+import { Link } from "gatsby";
+import MovingEclipse from "../Reusable/MovingEclipse";
+import redEclipse from "../../assets/img/red.png";
+import greenEclipse from "../../assets/img/green.png";
+import purpleEclipse from "../../assets/img/purple.png";
+import orangeEclipse from "../../assets/img/orange.png";
 
-function Hero({
-  arrowRef,
-  headerRef,
-  leftSectionRef,
-  paragraphRef,
-  svgRef,
-  signatureRef,
-}) {
-  const [mobile, setMobile] = useState(null)
+function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signatureRef }) {
+  const [mobile, setMobile] = useState(null);
 
-  const animationContainer = useRef()
+  const animationContainer = useRef();
 
   useEffect(() => {
     if (window.innerWidth < 684) {
-      setMobile(true)
+      setMobile(true);
     }
     lottie.loadAnimation({
       container: animationContainer.current,
       animationData: animation,
-    })
-  }, [])
+    });
+  }, []);
+
   return (
     <div id="heroSection" className={styles.hero}>
       <section className={styles.leftSection} ref={leftSectionRef}>
@@ -40,98 +35,36 @@ function Hero({
           {mobile ? (
             <h2 className={styles.heroHeader}>Frontend developer</h2>
           ) : (
-            <Typed
-              className={styles.heroHeader}
-              strings={["Frontend developer"]}
-              typeSpeed={20}
-              stopped={false}
-              startDelay={1200}
-            />
+            <Typed className={styles.heroHeader} strings={["Frontend developer"]} typeSpeed={20} stopped={false} startDelay={1200} />
           )}
         </div>
         <p className={styles.heroParagraph} ref={paragraphRef}>
-          Tworzę responsywne strony internetowe i aplikacje mobilne
-          wykorzystując najnowsze technologie, dopasowane do Twoich potrzeb.
-        </p>
-        <p className={styles.heroSignature} ref={signatureRef}>
-          Paweł Pajor
+          Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
+          non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem.
         </p>
       </section>
       <section className={styles.rightSection} ref={svgRef}>
-        <StaticImage
-          src="../../assets/img/ja.jpg"
-          alt="ja"
-          placeholder="blurred"
-          className={styles.imgMe}
-        />
+        <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
         <div className={styles.eclipsesWrapper}>
           <div className={styles.redEclipse}>
-            <MouseParallaxContainer
-              className={`${styles.redEclipseContainer} ${styles.eclipseContainer}`}
-            >
-              <MouseParallaxChild factorX={0.05} factorY={0.07}>
-                <StaticImage
-                  className={styles.eclipse}
-                  src="../../assets/img/red.png"
-                  placeholder="blurred"
-                  alt="red eclipse"
-                />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
+            <MovingEclipse imgPath={redEclipse} styling={`${styles.redEclipseContainer} ${styles.eclipseContainer}`} imgAlt="red eclipse" />
           </div>
           <div className={styles.greenEclipse}>
-            <MouseParallaxContainer
-              className={`${styles.greenEclipseContainer} ${styles.eclipseContainer}`}
-            >
-              <MouseParallaxChild factorX={0.05} factorY={0.07}>
-                <StaticImage
-                  className={styles.eclipse}
-                  src="../../assets/img/green.png"
-                  placeholder="blurred"
-                  alt="green eclipse"
-                />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
+            <MovingEclipse imgPath={greenEclipse} styling={`${styles.greenEclipseContainer} ${styles.eclipseContainer}`} imgAlt="green eclipse" />
           </div>
           <div className={styles.purpleEclipse}>
-            <MouseParallaxContainer
-              className={`${styles.purpleEclipseContainer} ${styles.eclipseContainer}`}
-            >
-              <MouseParallaxChild factorX={0.05} factorY={0.07}>
-                <StaticImage
-                  className={styles.eclipse}
-                  src="../../assets/img/purple.png"
-                  placeholder="blurred"
-                  alt="purple eclipse"
-                />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
+            <MovingEclipse imgPath={purpleEclipse} styling={`${styles.purpleEclipseContainer} ${styles.eclipseContainer}`} imgAlt="purple eclipse" />
           </div>
           <div className={styles.orangeEclipse}>
-            <MouseParallaxContainer
-              className={`${styles.orangeEclipseContainer} ${styles.eclipseContainer}`}
-            >
-              <MouseParallaxChild factorX={0.05} factorY={0.07}>
-                <StaticImage
-                  className={styles.eclipse}
-                  src="../../assets/img/orange.png"
-                  placeholder="blurred"
-                  alt="orange eclipse"
-                />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
+            <MovingEclipse imgPath={orangeEclipse} styling={`${styles.orangeEclipseContainer} ${styles.eclipseContainer}`} imgAlt="orange eclipse" />
           </div>
         </div>
       </section>
-      <Link
-        to="#projectsSection"
-        className={`link ${styles.scrollAnimationContainer}`}
-        ref={arrowRef}
-      >
+      <Link to="#projectsSection" className={`link ${styles.scrollAnimationContainer}`} ref={arrowRef}>
         <div className={styles.scrollAnimation} ref={animationContainer}></div>
       </Link>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

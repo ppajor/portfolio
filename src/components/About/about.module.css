@@ -24,7 +24,7 @@
 
 .img {
   width: 300px;
-  height: 322px;
+  height: auto;
 }
 
 .img:after {

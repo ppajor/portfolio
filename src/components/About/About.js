@@ -12,7 +12,7 @@ function About() {
         <div className={`revealLeft ${styles.aboutImgContainer}`}>
           <StaticImage
             className={` ${styles.img}`}
-            src="../../assets/img/cv-foto2.jpg"
+            src="../../assets/img/cvlol.png"
             placeholder="blurred"
             alt="av"
           />

@@ -59,20 +59,6 @@
   text-shadow: 0px 0px 30px rgba(176, 176, 176, 0.25);
 }
 
-.heroSignature {
-  margin-top: 16px;
-  text-align: right;
-  font-family: "Great Vibes";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 237.5%;
-  letter-spacing: 0.02em;
-  color: rgba(53, 53, 53, 0.9);
-
-  text-shadow: 0px 4px 2px rgba(165, 164, 164, 0.1);
-}
-
 /* right section*/
 .rightSection {
   position: relative; /*trzeba dac relative bo bierze wyzszego rodzica */
@@ -111,8 +97,8 @@
 
 .redEclipseContainer {
   position: relative;
-  bottom: 5em;
-  right: 75%;
+  bottom: 4.5em;
+  right: 95%;
 }
 
 .greenEclipse {
@@ -121,8 +107,8 @@
 
 .greenEclipseContainer {
   position: relative;
-  top: 15em;
-  right: 65%;
+  top: 13.5em;
+  right: 75%;
 }
 
 .purpleEclipse {
@@ -131,7 +117,7 @@
 
 .purpleEclipseContainer {
   position: relative;
-  bottom: 10em;
+  bottom: 8.5em;
   left: 90%;
 }
 
@@ -142,7 +128,7 @@
 .orangeEclipseContainer {
   position: relative;
   top: 10em;
-  left: 155%;
+  left: 120%;
 }
 
 .scrollAnimationContainer {
