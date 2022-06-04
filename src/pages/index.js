@@ -1,41 +1,41 @@
-import React, { useEffect, useRef, useState } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { HiX } from "react-icons/hi"
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HiX } from "react-icons/hi";
 
-import * as styles from "../styles/index.module.css"
-import Nav from "../components/Nav/Nav"
-import Hero from "../components/Hero/Hero"
-import NavMobile from "../components/NavMobile/NavMobile"
-import Projects from "../components/Projects/Projects"
-import About from "../components/About/About"
-import Skills from "../components/Skills/Skills"
-import Contact from "../components/Contact/Contact"
-import Footer from "../components/Footer/Footer"
-import Logo from "../assets/svg/nowe_logo.svg"
+import * as styles from "../styles/index.module.css";
+import Nav from "../components/Nav/Nav";
+import Hero from "../components/Hero/Hero";
+import NavMobile from "../components/NavMobile/NavMobile";
+import Projects from "../components/Projects/Projects";
+import About from "../components/About/About";
+import Skills from "../components/Skills/Skills";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
+import Logo from "../assets/svg/nowe_logo.svg";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true)
-  const [typingStopped, setTypingStopped] = useState(true)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [loading, setLoading] = useState(true);
+  const [typingStopped, setTypingStopped] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navRef = useRef()
-  const leftSectionRef = useRef()
-  const headerRef = useRef()
-  const pRef = useRef()
-  const svgRef = useRef()
-  const signatureRef = useRef()
-  const arrow = useRef()
-  const logoRef = useRef()
+  const navRef = useRef();
+  const leftSectionRef = useRef();
+  const headerRef = useRef();
+  const pRef = useRef();
+  const svgRef = useRef();
+  const signatureRef = useRef();
+  const arrow = useRef();
+  const logoRef = useRef();
 
   //console.log("loading", loading)
 
   useEffect(() => {
     //console.log("RERENDER")
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
-    const leftTriggers = gsap.utils.toArray(".revealLeft")
-    leftTriggers.forEach(item => {
+    const leftTriggers = gsap.utils.toArray(".revealLeft");
+    leftTriggers.forEach((item) => {
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
@@ -45,12 +45,12 @@ export default function Home() {
         delay: 0.2,
         ease: "power3.out",
         opacity: 0,
-      })
-    })
+      });
+    });
 
-    const topTriggers = gsap.utils.toArray(".revealTop")
+    const topTriggers = gsap.utils.toArray(".revealTop");
 
-    topTriggers.forEach(item => {
+    topTriggers.forEach((item) => {
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
@@ -60,11 +60,11 @@ export default function Home() {
         delay: 0.2,
         ease: "power3.out",
         opacity: 0,
-      })
-    })
+      });
+    });
 
-    const rightTriggers = gsap.utils.toArray(".revealRight")
-    rightTriggers.forEach(item => {
+    const rightTriggers = gsap.utils.toArray(".revealRight");
+    rightTriggers.forEach((item) => {
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
@@ -75,25 +75,25 @@ export default function Home() {
 
         ease: "power3.out",
         opacity: 0,
-      })
-    })
+      });
+    });
 
-    var tl = gsap.timeline()
+    var tl = gsap.timeline();
 
     tl.from(navRef.current, {
       yPercent: -100,
       duration: 0.75,
       ease: "power2.in",
-    })
+    });
 
-    var mql = window.matchMedia("(min-width: 684px)")
+    var mql = window.matchMedia("(min-width: 684px)");
     if (mql.matches) {
       tl.from(headerRef.current, {
         duration: 1,
         xPercent: -10,
         opacity: 0,
         ease: "power2.in",
-      })
+      });
 
       tl.from(
         pRef.current,
@@ -104,7 +104,7 @@ export default function Home() {
           ease: "power2.in",
         },
         "<"
-      )
+      );
 
       tl.from(
         signatureRef.current,
@@ -115,25 +115,25 @@ export default function Home() {
           ease: "power2.in",
         },
         "<"
-      )
+      );
 
       tl.from(headerRef.current, {
         "--pseudo-element-width": 0,
         duration: 0.5,
-      })
+      });
 
       tl.from(svgRef.current, {
         opacity: 0,
         duration: 0.75,
         ease: "power2.in",
-      })
+      });
 
       tl.from(arrow.current, {
         opacity: 0,
         duration: 0.2,
         yPercent: -5,
         ease: "power2.in",
-      })
+      });
     } else {
       tl.from(leftSectionRef.current, {
         x: -30,
@@ -141,22 +141,22 @@ export default function Home() {
         delay: 0.2,
         ease: "power3.out",
         opacity: 0,
-      })
+      });
 
       tl.from(arrow.current, {
         opacity: 0,
         duration: 0.2,
         yPercent: -5,
         ease: "power2.in",
-      })
+      });
     }
-  }, [loading])
+  }, [loading]);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     gsap.to(logoRef.current, {
@@ -164,8 +164,8 @@ export default function Home() {
       duration: 0.8,
       delay: 0.2,
       ease: "power2.in",
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <>
@@ -183,12 +183,7 @@ export default function Home() {
           />
           {menuOpen && (
             <div className={styles.mobileNavContainer}>
-              <div
-                className={styles.exitIconContainer}
-                onClick={() =>
-                  setMenuOpen(false)
-                } /*sposob na on clicka w divie w reactie*/
-              >
+              <div className={styles.exitIconContainer} onClick={() => setMenuOpen(false)} /*sposob na on clicka w divie w reactie*/>
                 <HiX size={32} />
               </div>
               <NavMobile clickLink={() => setMenuOpen(false)} />
@@ -208,5 +203,5 @@ export default function Home() {
         </div>
       )}
     </>
-  )
+  );
 }

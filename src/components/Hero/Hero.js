@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 import Typed from "react-typed";
 import lottie from "lottie-web";
 
@@ -17,6 +16,7 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
   const [mobile, setMobile] = useState(null);
 
   const animationContainer = useRef();
+  const typedStrings = ["Frontend developer"];
 
   useEffect(() => {
     if (window.innerWidth < 684) {
@@ -35,13 +35,19 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
           {mobile ? (
             <h2 className={styles.heroHeader}>Frontend developer</h2>
           ) : (
-            <Typed className={styles.heroHeader} strings={["Frontend developer"]} typeSpeed={20} stopped={false} startDelay={1200} />
+            <Typed className={styles.heroHeader} strings={typedStrings} typeSpeed={20} stopped={false} startDelay={1200} />
           )}
         </div>
         <p className={styles.heroParagraph} ref={paragraphRef}>
           Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
           non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem.
         </p>
+        <Link to="#contactSection" className={`link`}>
+          <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
+        </Link>
+        <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
+          <div className={styles.scrollAnimation} ref={animationContainer}></div>
+        </Link>
       </section>
       <section className={styles.rightSection} ref={svgRef}>
         <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
@@ -60,9 +66,6 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
           </div>
         </div>
       </section>
-      <Link to="#projectsSection" className={`link ${styles.scrollAnimationContainer}`} ref={arrowRef}>
-        <div className={styles.scrollAnimation} ref={animationContainer}></div>
-      </Link>
     </div>
   );
 }
