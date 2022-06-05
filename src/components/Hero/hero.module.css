@@ -5,20 +5,22 @@
 
 .hero {
   position: relative;
+  width: 100%;
+  min-height: fit-content;
+  padding-left: var(--paddingContainer);
+  margin-bottom: var(--paddingContainer);
+}
+
+.heroContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: fit-content;
-
-  padding-left: var(--paddingContainer);
-  padding-right: 50px;
-  margin-bottom: var(--paddingContainer);
+  margin-top: var(--navHeight);
 }
 
 .leftSection {
   position: relative;
   width: 50%;
-  margin-top: var(--navHeight);
   padding-top: 150px;
   margin-left: 50px;
 }
@@ -45,18 +47,14 @@
   transform: rotate(180deg);
 }
 
-.quoteIcon {
-  margin-right: 16px;
-}
-
 .heroParagraph {
   width: 100%;
   margin-top: 64px;
-  color: rgba(0, 0, 0, 0.75);
   line-height: 2.3;
   letter-spacing: 0.025em;
-  will-change: opacity;
   text-shadow: 0px 0px 30px rgba(176, 176, 176, 0.25);
+  color: rgba(0, 0, 0, 0.75);
+  will-change: opacity;
 }
 
 .contactBtn {
@@ -64,12 +62,14 @@
   background-color: transparent;
   color: #d73838;
   border: 2px solid #d73838;
+  filter: drop-shadow(0px 0px 50px rgba(215, 56, 56, 0.63));
   transition: 0.3s all ease;
 }
 
 .contactBtn:hover {
   background-color: #d73838;
   color: #fff;
+  filter: drop-shadow(0px 0px 50px rgba(215, 56, 56, 0.25));
   transition: 0.3s all ease;
 }
 
@@ -78,7 +78,6 @@
   position: relative; /*trzeba dac relative bo bierze wyzszego rodzica */
   width: 50%;
   height: 100%;
-  margin-top: var(--navHeight);
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -112,7 +111,7 @@
 .redEclipseContainer {
   position: relative;
   bottom: 4.5em;
-  right: 95%;
+  right: 50px;
 }
 
 .greenEclipse {
@@ -122,17 +121,11 @@
 .greenEclipseContainer {
   position: relative;
   top: 13.5em;
-  right: 75%;
 }
 
 .purpleEclipse {
   position: absolute;
-}
-
-.purpleEclipseContainer {
-  position: relative;
-  bottom: 8.5em;
-  left: 90%;
+  flex: 1;
 }
 
 .orangeEclipse {
@@ -142,7 +135,6 @@
 .orangeEclipseContainer {
   position: relative;
   top: 10em;
-  left: 120%;
 }
 
 .animationContainer {
@@ -204,6 +196,9 @@
   .eclipse {
     width: 85%;
     height: auto;
+    box-shadow: 0px 0px 250px rgba(215, 56, 56, 0.6);
+    -webkit-filter: drop-shadow(0px 0px 250px rgba(215, 56, 56, 0.6));
+    filter: drop-shadow(0px 0px 250px rgba(215, 56, 56, 0.6));
   }
 
   .redEclipseContainer {

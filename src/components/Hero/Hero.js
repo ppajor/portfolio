@@ -7,10 +7,11 @@ import * as styles from "./hero.module.css";
 import animation from "../../assets/lottie/arrow-down.json";
 import { Link } from "gatsby";
 import MovingEclipse from "../Reusable/MovingEclipse";
-import redEclipse from "../../assets/img/red.png";
-import greenEclipse from "../../assets/img/green.png";
-import purpleEclipse from "../../assets/img/purple.png";
-import orangeEclipse from "../../assets/img/orange.png";
+import RedEclipseSVG from "../../assets/svg/red_eclipse.svg";
+import GreenShadow from "../../assets/svg/green_shadow.svg";
+import RedShadow from "../../assets/svg/red_shadow.svg";
+import PurpleShadow from "../../assets/svg/purple_shadow.svg";
+import OrangeShadow from "../../assets/svg/orange_shadow.svg";
 
 function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signatureRef }) {
   const [mobile, setMobile] = useState(null);
@@ -30,42 +31,30 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
 
   return (
     <div id="heroSection" className={styles.hero}>
-      <section className={styles.leftSection} ref={leftSectionRef}>
-        <div ref={headerRef}>
-          {mobile ? (
-            <h2 className={styles.heroHeader}>Frontend developer</h2>
-          ) : (
-            <Typed className={styles.heroHeader} strings={typedStrings} typeSpeed={20} stopped={false} startDelay={1200} />
-          )}
-        </div>
-        <p className={styles.heroParagraph} ref={paragraphRef}>
-          Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
-          non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem accumsan.
-        </p>
-        <Link to="#contactSection" className={`link`}>
-          <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
-        </Link>
-        <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
-          <div className={styles.scrollAnimation} ref={animationContainer}></div>
-        </Link>
-      </section>
-      <section className={styles.rightSection} ref={svgRef}>
-        <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
-        <div className={styles.eclipsesWrapper}>
-          <div className={styles.redEclipse}>
-            <MovingEclipse imgPath={redEclipse} styling={`${styles.redEclipseContainer} ${styles.eclipseContainer}`} imgAlt="red eclipse" />
+      <div className={styles.heroContainer}>
+        <section className={styles.leftSection} ref={leftSectionRef}>
+          <div ref={headerRef}>
+            {mobile ? (
+              <h2 className={styles.heroHeader}>Frontend developer</h2>
+            ) : (
+              <Typed className={styles.heroHeader} strings={typedStrings} typeSpeed={20} stopped={false} startDelay={1200} />
+            )}
           </div>
-          <div className={styles.greenEclipse}>
-            <MovingEclipse imgPath={greenEclipse} styling={`${styles.greenEclipseContainer} ${styles.eclipseContainer}`} imgAlt="green eclipse" />
-          </div>
-          <div className={styles.purpleEclipse}>
-            <MovingEclipse imgPath={purpleEclipse} styling={`${styles.purpleEclipseContainer} ${styles.eclipseContainer}`} imgAlt="purple eclipse" />
-          </div>
-          <div className={styles.orangeEclipse}>
-            <MovingEclipse imgPath={orangeEclipse} styling={`${styles.orangeEclipseContainer} ${styles.eclipseContainer}`} imgAlt="orange eclipse" />
-          </div>
-        </div>
-      </section>
+          <p className={styles.heroParagraph} ref={paragraphRef}>
+            Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
+            non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem accumsan.
+          </p>
+          <Link to="#contactSection" className={`link`}>
+            <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
+          </Link>
+          <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
+            <div className={styles.scrollAnimation} ref={animationContainer}></div>
+          </Link>
+        </section>
+        <section className={styles.rightSection} ref={svgRef}>
+          <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
+        </section>
+      </div>
     </div>
   );
 }

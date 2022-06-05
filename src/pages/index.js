@@ -172,27 +172,30 @@ export default function Home() {
       {!loading ? (
         <div id="root" className={styles.mainContainer}>
           <Nav navRef={navRef} hamburgerOpen={() => setMenuOpen(true)} />
-          <Hero
-            leftSectionRef={leftSectionRef}
-            headerRef={headerRef}
-            paragraphRef={pRef}
-            svgRef={svgRef}
-            signatureRef={signatureRef}
-            arrowRef={arrow}
-            typingAnimationStopped={typingStopped}
-          />
-          {menuOpen && (
-            <div className={styles.mobileNavContainer}>
-              <div className={styles.exitIconContainer} onClick={() => setMenuOpen(false)} /*sposob na on clicka w divie w reactie*/>
-                <HiX size={32} />
+
+          <div className={styles.containerWraper}>
+            <Hero
+              leftSectionRef={leftSectionRef}
+              headerRef={headerRef}
+              paragraphRef={pRef}
+              svgRef={svgRef}
+              signatureRef={signatureRef}
+              arrowRef={arrow}
+              typingAnimationStopped={typingStopped}
+            />
+            {menuOpen && (
+              <div className={styles.mobileNavContainer}>
+                <div className={styles.exitIconContainer} onClick={() => setMenuOpen(false)} /*sposob na on clicka w divie w reactie*/>
+                  <HiX size={32} />
+                </div>
+                <NavMobile clickLink={() => setMenuOpen(false)} />
               </div>
-              <NavMobile clickLink={() => setMenuOpen(false)} />
-            </div>
-          )}
-          <Projects />
-          <About />
-          <Skills />
-          <Contact />
+            )}
+            <Projects />
+            <About />
+            <Skills />
+            <Contact />
+          </div>
           <Footer />
         </div>
       ) : (
