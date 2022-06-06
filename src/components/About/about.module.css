@@ -79,6 +79,14 @@
     padding-left: 0px;
     padding-bottom: 96px;
   }
+
+  .aboutParagraph {
+    text-align: center;
+  }
+
+  .aboutHeader {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 684px) {

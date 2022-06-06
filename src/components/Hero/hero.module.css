@@ -136,8 +136,9 @@
   .rightSection {
     order: 1;
     width: 100%;
-    transform: scale(0.8);
-    margin-bottom: 75px;
+    transform: scale(1);
+    margin-bottom: 50px;
+    padding-top: 75px;
   }
 
   .imgMe {
