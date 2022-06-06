@@ -12,14 +12,9 @@
 }
 
 .aboutImgContainer {
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: center;
-  /*
-  background-image: url("../../assets/img/about-blob.png");
-  background-repeat: no-repeat;
-  background-position: center;
-*/
 }
 
 .img {
@@ -36,8 +31,9 @@
 }
 
 .aboutContentContainer {
-  width: 60%;
-  padding-left: 50px;
+  width: 65%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .aboutHeader {

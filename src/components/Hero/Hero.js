@@ -6,12 +6,11 @@ import lottie from "lottie-web";
 import * as styles from "./hero.module.css";
 import animation from "../../assets/lottie/arrow-down.json";
 import { Link } from "gatsby";
-import MovingEclipse from "../Reusable/MovingEclipse";
-import RedEclipseSVG from "../../assets/svg/red_eclipse.svg";
-import GreenShadow from "../../assets/svg/green_shadow.svg";
-import RedShadow from "../../assets/svg/red_shadow.svg";
-import PurpleShadow from "../../assets/svg/purple_shadow.svg";
-import OrangeShadow from "../../assets/svg/orange_shadow.svg";
+import GreenEclipse from "../../assets/svg/green_shadow.svg";
+import RedEclipse from "../../assets/svg/red_shadow.svg";
+import PurpleEclipse from "../../assets/svg/purple_shadow.svg";
+import OrangeEclipse from "../../assets/svg/orange_shadow.svg";
+import Eclipses from "../../assets/svg/eclipseSvgs.svg";
 
 function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signatureRef }) {
   const [mobile, setMobile] = useState(null);
@@ -47,14 +46,15 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
           <Link to="#contactSection" className={`link`}>
             <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
           </Link>
-          <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
-            <div className={styles.scrollAnimation} ref={animationContainer}></div>
-          </Link>
         </section>
         <section className={styles.rightSection} ref={svgRef}>
           <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
+          <Eclipses style={{ position: "absolute", marginLeft: "auto", marginRight: "auto", top: -150, paddingLeft: 25 }} />
         </section>
       </div>
+      <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
+        <div className={styles.scrollAnimation} ref={animationContainer}></div>
+      </Link>
     </div>
   );
 }

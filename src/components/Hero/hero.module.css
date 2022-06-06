@@ -7,7 +7,7 @@
   position: relative;
   width: 100%;
   min-height: fit-content;
-  padding-left: var(--paddingContainer);
+  margin-top: var(--navHeight);
   margin-bottom: var(--paddingContainer);
 }
 
@@ -15,14 +15,14 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: var(--navHeight);
+  padding-left: var(--paddingContainer);
 }
 
+/******************* Left section**********/
 .leftSection {
   position: relative;
   width: 50%;
   padding-top: 150px;
-  margin-left: 50px;
 }
 
 .heroHeader {
@@ -73,11 +73,10 @@
   transition: 0.3s all ease;
 }
 
-/* right section*/
+/******************* Right section**********/
 .rightSection {
   position: relative; /*trzeba dac relative bo bierze wyzszego rodzica */
   width: 50%;
-  height: 100%;
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -91,58 +90,10 @@
   object-fit: contain;
 }
 
-.eclipsesWrapper {
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.eclipseContainer {
-  padding: 16px;
-}
-
-.redEclipse {
-  position: absolute;
-}
-
-.redEclipseContainer {
-  position: relative;
-  bottom: 4.5em;
-  right: 50px;
-}
-
-.greenEclipse {
-  position: absolute;
-}
-
-.greenEclipseContainer {
-  position: relative;
-  top: 13.5em;
-}
-
-.purpleEclipse {
-  position: absolute;
-  flex: 1;
-}
-
-.orangeEclipse {
-  position: absolute;
-}
-
-.orangeEclipseContainer {
-  position: relative;
-  top: 10em;
-}
-
 .animationContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: -5%;
-  margin-top: 50px;
+  position: absolute;
+  margin-left: 50px;
+  bottom: -150px;
 }
 
 .scrollAnimation {
@@ -150,19 +101,16 @@
   height: auto;
 }
 
-/*media queries*/
-@media screen and (max-width: 1187px) {
-  .heroHeader:before {
-    width: var(--pseudo-element-width-sm) !important;
-  }
-}
-
+/******************* Media queries**********/
 @media screen and (max-width: 1090px) {
   .hero {
-    flex-direction: column;
-    padding-right: var(--paddingContainer);
-    padding-left: var(--paddingContainer);
     margin-bottom: 0;
+  }
+
+  .heroContainer {
+    flex-direction: column;
+    padding-right: var(--paddingContainerSm);
+    padding-left: var(--paddingContainerSm);
   }
 
   .leftSection {
@@ -176,13 +124,9 @@
     width: var(--pseudo-element-width) !important;
   }
 
-  .heroSignature {
-    align-self: flex-end;
-  }
-
   .rightSection {
     width: 100%;
-    height: 100%;
+    transform: scale(0.9);
 
     margin-top: 0;
     margin-bottom: 0;
@@ -192,44 +136,11 @@
     width: 250px;
     height: auto;
   }
-
-  .eclipse {
-    width: 85%;
-    height: auto;
-    box-shadow: 0px 0px 250px rgba(215, 56, 56, 0.6);
-    -webkit-filter: drop-shadow(0px 0px 250px rgba(215, 56, 56, 0.6));
-    filter: drop-shadow(0px 0px 250px rgba(215, 56, 56, 0.6));
-  }
-
-  .redEclipseContainer {
-    position: relative;
-    bottom: 5em;
-    right: 65%;
-  }
-
-  .greenEclipseContainer {
-    position: relative;
-    top: 11em;
-    right: 45%;
-  }
-
-  .purpleEclipseContainer {
-    position: relative;
-    bottom: 10em;
-    left: 90%;
-  }
-
-  .orangeEclipseContainer {
-    position: relative;
-    top: 10em;
-    left: 115%;
-  }
 }
 
 @media screen and (max-width: 684px) {
-  .hero {
-    padding-left: var(--paddingContainerSm);
-    padding-right: var(--paddingContainerSm);
+  .leftSection {
+    padding-top: 25px;
   }
 
   .heroHeader {
@@ -245,44 +156,13 @@
     width: var(--pseudo-element-width-sm) !important;
   }
 
-  .leftSection {
-    padding-top: 48px;
-    margin-top: var(--navHeightSm);
-  }
-
   .rightSection {
-    display: none;
+    transform: scale(0.5);
   }
 
   .imgMe {
     width: 200px;
     height: auto;
-  }
-
-  .eclipse {
-    width: 65%;
-    height: auto;
-  }
-  .eclipsesWrapper {
-    background-image: url("../../assets/img/eclipses-bg.png");
-    background-position: center;
-    background-size: cover;
-  }
-
-  .redEclipseContainer {
-    display: none;
-  }
-
-  .greenEclipseContainer {
-    display: none;
-  }
-
-  .purpleEclipseContainer {
-    display: none;
-  }
-
-  .orangeEclipseContainer {
-    display: none;
   }
 
   .animationContainer {
