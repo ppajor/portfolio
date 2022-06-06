@@ -90,6 +90,14 @@
   object-fit: contain;
 }
 
+.eclipses {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: -150px;
+  padding-left: 25px;
+}
+
 .animationContainer {
   position: absolute;
   margin-left: 50px;
@@ -126,15 +134,21 @@
 
   .rightSection {
     width: 100%;
-    transform: scale(0.9);
-
-    margin-top: 0;
-    margin-bottom: 0;
+    transform: scale(1);
   }
 
   .imgMe {
     width: 250px;
     height: auto;
+  }
+
+  .eclipses {
+    bottom: 50px;
+  }
+
+  .animationContainer {
+    margin-left: 0;
+    bottom: -100px;
   }
 }
 
@@ -157,7 +171,7 @@
   }
 
   .rightSection {
-    transform: scale(0.5);
+    display: none;
   }
 
   .imgMe {

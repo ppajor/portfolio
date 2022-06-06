@@ -49,7 +49,9 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
         </section>
         <section className={styles.rightSection} ref={svgRef}>
           <StaticImage src="../../assets/img/ja3.png" alt="ja" placeholder="blurred" className={styles.imgMe} />
-          <Eclipses style={{ position: "absolute", marginLeft: "auto", marginRight: "auto", top: -150, paddingLeft: 25 }} />
+          <div className={styles.eclipses}>
+            <Eclipses />
+          </div>
         </section>
       </div>
       <Link to="#projectsSection" className={`link ${styles.animationContainer}`} ref={arrowRef}>
