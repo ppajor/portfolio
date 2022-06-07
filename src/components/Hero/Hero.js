@@ -43,7 +43,7 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
             Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
             non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem accumsan.
           </p>
-          <Link to="#contactSection" className={`link`}>
+          <Link to="#contactSection" className={`link`} ref={signatureRef}>
             <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
           </Link>
         </section>
