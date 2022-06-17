@@ -6,8 +6,6 @@ import * as styles from "./projects.module.css";
 function ProjectBox({ description, img, isMobile, link, name, technologies }) {
   const [loadedImg, setLoadedImg] = useState(false);
 
-  console.log("loadedimg", loadedImg);
-
   useEffect(() => {
     setLoadedImg(false);
   }, [img]);

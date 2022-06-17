@@ -69,6 +69,13 @@
   .nav {
     min-height: var(--navHeightSm);
   }
+
+  .navWraper {
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: flex-start;
+  }
+
   .logo {
     left: var(--paddingContainerSm);
   }
