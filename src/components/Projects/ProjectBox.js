@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { BsGithub } from "react-icons/bs"
+import React, { useState, useEffect } from "react";
+import { BsGithub } from "react-icons/bs";
 
-import * as styles from "./projects.module.css"
+import * as styles from "./projects.module.css";
 
 function ProjectBox({ description, img, isMobile, link, name, technologies }) {
-  const [loadedImg, setLoadedImg] = useState(false)
+  const [loadedImg, setLoadedImg] = useState(false);
 
-  console.log("loadedimg", loadedImg)
+  console.log("loadedimg", loadedImg);
 
   useEffect(() => {
-    setLoadedImg(false)
-  }, [])
+    setLoadedImg(false);
+  }, [img]);
 
   return (
     <>
@@ -18,14 +18,14 @@ function ProjectBox({ description, img, isMobile, link, name, technologies }) {
         <div className={styles.mockupContainer}>
           {isMobile ? (
             <img
-              className={styles.mockupImgMobile}
+              className={`${styles.mockupImgMobile} ${loadedImg ? styles.active : styles.hidden}`}
               src={img}
               alt="mockup"
               onLoad={() => setLoadedImg(true)}
             />
           ) : (
             <img
-              className={styles.mockupImgDesktop}
+              className={`${styles.mockupImgDesktop} ${loadedImg ? styles.active : styles.hidden}`}
               src={img}
               alt="mockup"
               onLoad={() => setLoadedImg(true)}
@@ -34,9 +34,7 @@ function ProjectBox({ description, img, isMobile, link, name, technologies }) {
         </div>
         <div className={styles.projectContentContainer}>
           <h2 className={styles.projectContentHeader}>{name}</h2>
-          <p className={` ${styles.projectContentParagraph} paragraph`}>
-            {description}
-          </p>
+          <p className={` ${styles.projectContentParagraph} paragraph`}>{description}</p>
           <p className={styles.projectContentTechnologies}>
             Zastosowane technologie:
             <span className={styles.grayText}>{technologies}</span>
@@ -50,7 +48,7 @@ function ProjectBox({ description, img, isMobile, link, name, technologies }) {
         </div>
       </article>
     </>
-  )
+  );
 }
 
-export default ProjectBox
+export default ProjectBox;

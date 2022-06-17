@@ -1,31 +1,26 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import * as styles from "./projects.module.css"
-import ProjectBox from "./ProjectBox"
-import NavigationCircle from "./NavigationCircle"
-import mockupBooking from "../../assets/img/mockup-booking-min.png"
-import mockupMissYou from "../../assets/img/mockup-missyouapp-min.png"
-import mockupIPTracker from "../../assets/img/mockup-ipaddress-min.png"
-import mockupSuprai from "../../assets/img/mockup-suprai-min.png"
-import mockupPortfolio from "../../assets/img/mockup-portfolio-min.png"
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import * as styles from "./projects.module.css";
+import ProjectBox from "./ProjectBox";
+import NavigationCircle from "./NavigationCircle";
+import mockupBooking from "../../assets/img/mockup-booking-min.png";
+import mockupMissYou from "../../assets/img/mockup-missyouapp-min.png";
+import mockupIPTracker from "../../assets/img/mockup-ipaddress-min.png";
+import mockupSuprai from "../../assets/img/mockup-suprai-min.png";
+import mockupPortfolio from "../../assets/img/mockup-portfolio-min.png";
 
 function Projects() {
-  const [projectID, setProjectID] = useState(0)
+  const [projectID, setProjectID] = useState(0);
 
   return (
     <section id="projectsSection" className="customContainer">
       <h3 className="revealTop sectionHeader">PROJEKTY</h3>
       <div className={styles.checkContainer}>
-        <h2 className={`revealLeft ${styles.checkHeader}`}>
-          Sprawdź moje projekty!
-        </h2>
+        <h2 className={`revealLeft ${styles.checkHeader}`}>Sprawdź moje projekty!</h2>
         <p className={`revealRight ${styles.checkParagraph} paragraph`}>
-          Poniższe projekty, zostały zrealizowane w 100% przeze mnie i jestem
-          ich pomysłodawcą. Podczas ich tworzenia staram się kłaść nacisk
-          zarówno na funkcjonalności jak i walory estetyczne, by były przyjemne
-          dla oka i przyciągały uwagę użytkowników. Dbałość o szczegóły,
-          estetyka oraz kreatywność to główne cechy jakimi kieruję się przy
-          tworzeniu projektów.
+          Poniższe projekty, zostały zrealizowane w 100% przeze mnie i jestem ich pomysłodawcą. Podczas ich tworzenia staram się kłaść nacisk zarówno
+          na funkcjonalności jak i walory estetyczne, by były przyjemne dla oka i przyciągały uwagę użytkowników. Dbałość o szczegóły, estetyka oraz
+          kreatywność to główne cechy jakimi kieruję się przy tworzeniu projektów.
         </p>
       </div>
       <ProjectBox
@@ -35,33 +30,22 @@ function Projects() {
         technologies={projects[projectID].technologies}
         link={projects[projectID].link}
         isMobile={projects[projectID].mobile}
+        loaded={false}
       />
       <div className={styles.sliderNavigation}>
-        {projects.map(el => {
+        {projects.map((el) => {
           if (el.id - 1 == projectID) {
-            return (
-              <NavigationCircle
-                active={true}
-                key={el.id}
-                handleOnClick={() => setProjectID(el.id - 1)}
-              />
-            )
+            return <NavigationCircle active={true} key={el.id} handleOnClick={() => setProjectID(el.id - 1)} />;
           } else {
-            return (
-              <NavigationCircle
-                active={false}
-                key={el.id}
-                handleOnClick={() => setProjectID(el.id - 1)}
-              />
-            )
+            return <NavigationCircle active={false} key={el.id} handleOnClick={() => setProjectID(el.id - 1)} />;
           }
         })}
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
 
 const projects = [
   {
@@ -109,4 +93,4 @@ const projects = [
     link: "https://github.com/ppajor/portfolio",
     mobile: false,
   },
-]
+];

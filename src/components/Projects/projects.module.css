@@ -190,3 +190,11 @@
     margin-right: auto;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
