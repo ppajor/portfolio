@@ -8,6 +8,7 @@ import mockupMissYou from "../../assets/img/mockup-missyouapp-min.png";
 import mockupIPTracker from "../../assets/img/mockup-ipaddress-min.png";
 import mockupSuprai from "../../assets/img/mockup-suprai-min.png";
 import mockupPortfolio from "../../assets/img/mockup-portfolio-min.png";
+import mockupGithubSearch from "../../assets/img/mockup_githubSearch.png";
 
 function Projects() {
   const [projectID, setProjectID] = useState(0);
@@ -59,15 +60,24 @@ const projects = [
   },
   {
     id: 2,
+    name: "Github files search",
+    img: mockupGithubSearch,
+    desc: `Responsywna strona internetowa zbudowana przy pomocy technologii React/Typescript mająca na celu wyszukiwanie plików z repozytoriów githuba, danego użytkownika przy określeniu języka programowania`,
+    technologies: "react, typescript, node.js, npm, api, local storage",
+    link: "https://github.com/ppajor/GithubFilesSearch",
+    mobile: false,
+  },
+  {
+    id: 3,
     name: "MissYou App",
     img: mockupMissYou,
-    desc: `Aplikacja mobilna na platformę android stworzona dla zakochanych w związku na odległość `,
+    desc: `Aplikacja mobilna na platformę android stworzona dla zakochanych przy pomocy frameworku React Native `,
     technologies: "react native, firebase, node.js, npm",
     link: "https://github.com/ppajor/MissYouApp",
     mobile: "true",
   },
   {
-    id: 3,
+    id: 4,
     name: "IP Address Tracker",
     img: mockupIPTracker,
     desc: `Responsywna strona internetowa pozwalająca na wyszukiwanie kluczowych informacji oraz lokalizacji wpisanego IP bądź adresu domeny. `,
@@ -76,7 +86,7 @@ const projects = [
     mobile: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "SuprAI",
     img: mockupSuprai,
     desc: `Responsywna strona internetowa dla firmy, stworzona przy pomocy frameworku Bootstrap.`,
@@ -85,7 +95,7 @@ const projects = [
     mobile: false,
   },
   {
-    id: 5,
+    id: 6,
     name: "Portfolio",
     img: mockupPortfolio,
     desc: `Projekt aktualnego portfolio.`,
