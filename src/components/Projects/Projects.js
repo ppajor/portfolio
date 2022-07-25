@@ -19,9 +19,8 @@ function Projects() {
       <div className={styles.checkContainer}>
         <h2 className={`revealLeft ${styles.checkHeader}`}>Sprawdź moje projekty!</h2>
         <p className={`revealRight ${styles.checkParagraph} paragraph`}>
-          Poniższe projekty, zostały zrealizowane w 100% przeze mnie i jestem ich pomysłodawcą. Podczas ich tworzenia staram się kłaść nacisk zarówno
-          na funkcjonalności jak i walory estetyczne, by były przyjemne dla oka i przyciągały uwagę użytkowników. Dbałość o szczegóły, estetyka oraz
-          kreatywność to główne cechy jakimi kieruję się przy tworzeniu projektów.
+          Poniższe projekty, zostały zrealizowane w 100% przeze mnie i jestem ich pomysłodawcą. Dbałość o szczegóły, estetyka oraz kreatywność to
+          główne cechy jakimi kieruję się przy tworzeniu projektów.
         </p>
       </div>
       <ProjectBox
@@ -31,6 +30,7 @@ function Projects() {
         technologies={projects[projectID].technologies}
         link={projects[projectID].link}
         isMobile={projects[projectID].mobile}
+        demo={projects[projectID].demo}
         loaded={false}
       />
       <div className={styles.sliderNavigation}>
@@ -65,6 +65,7 @@ const projects = [
     desc: `Responsywna strona internetowa zbudowana przy pomocy technologii React/Typescript mająca na celu wyszukiwanie plików z repozytoriów githuba, danego użytkownika przy określeniu języka programowania`,
     technologies: "react, typescript, node.js, npm, api, local storage",
     link: "https://github.com/ppajor/GithubFilesSearch",
+    demo: "https://astounding-chaja-76a044.netlify.app/",
     mobile: false,
   },
   {
@@ -83,6 +84,7 @@ const projects = [
     desc: `Responsywna strona internetowa pozwalająca na wyszukiwanie kluczowych informacji oraz lokalizacji wpisanego IP bądź adresu domeny. `,
     technologies: "html, css, js, api",
     link: "https://github.com/ppajor/IP-Address-Tracker",
+    demo: "https://dreamy-meitner-f6d00a.netlify.app/",
     mobile: false,
   },
   {
@@ -92,6 +94,7 @@ const projects = [
     desc: `Responsywna strona internetowa dla firmy, stworzona przy pomocy frameworku Bootstrap.`,
     technologies: "html, css, bootstrap",
     link: "https://github.com/ppajor/Company-landing-page",
+    demo: "https://admirable-travesseiro-ef441f.netlify.app/",
     mobile: false,
   },
   {

@@ -37,6 +37,7 @@ function ProjectBox({ description, img, isMobile, link, name, technologies }) {
             Zastosowane technologie:
             <span className={styles.grayText}>{technologies}</span>
           </p>
+
           <a href={link} className={styles.link}>
             <button className={`btnPrimary ${styles.projectContainerBtn}`}>
               <BsGithub size={18} className={styles.githubLogo} />

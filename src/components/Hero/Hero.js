@@ -40,11 +40,11 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
             )}
           </div>
           <p className={styles.heroParagraph} ref={paragraphRef}>
-            Lorem ipsum dolor amet, consectetur adipiscing elit. Hac enim donec vitae tortor. At sem enim integer mi accumsan, morbi massa tincidunt
-            non. Diam blandit dignissim sem enim arcu, tellus, fringilla lorem accumsan.
+            Jestem developerem otwartym na nowe technologie i ciekawe projekty, angażuję się w wykonywane zadania i wprowadzam dobrą atmosferę do
+            zespołu.
           </p>
-          <Link to="#contactSection" className={`link`} ref={signatureRef}>
-            <button className={`btnPrimary ${styles.contactBtn}`}>Poznajmy się!</button>
+          <Link to="#projectsSection" className={`link`} ref={signatureRef}>
+            <button className={`btnPrimary ${styles.contactBtn}`}>Zobacz moje projekty</button>
           </Link>
         </section>
         <section className={styles.rightSection} ref={svgRef}>

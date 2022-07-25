@@ -12,7 +12,7 @@ function About() {
           <StaticImage className={` ${styles.img}`} src="../../assets/img/cvlol.png" placeholder="blurred" alt="av" />
         </div>
         <div className={`revealRight ${styles.aboutContentContainer}`}>
-          <h2 className={styles.aboutHeader}>Cześć! Jestem Paweł! :)</h2>
+          <h2 className={styles.aboutHeader}>Trochę o mnie :)</h2>
           <p className={styles.aboutParagraph}>
             Jestem studentem, od kilku lat interesuję się designem, tworzeniem stron internetowych oraz aplikacji mobilnych. Moim celem jest uzyskanie
             doświadczenia zawodowego i kształtowanie swoich umiejętności technicznych w zakresie Frontend Developmentu. Nie mam problemów z
