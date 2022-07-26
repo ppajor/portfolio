@@ -1,19 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
+import * as styles from "./hero.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Typed from "react-typed";
 import lottie from "lottie-web";
+import { useTranslation, Trans, Link } from "gatsby-plugin-react-i18next";
 
-import * as styles from "./hero.module.css";
 import animation from "../../assets/lottie/arrow-down.json";
-import { Link } from "gatsby";
-import GreenEclipse from "../../assets/svg/green_shadow.svg";
-import RedEclipse from "../../assets/svg/red_shadow.svg";
-import PurpleEclipse from "../../assets/svg/purple_shadow.svg";
-import OrangeEclipse from "../../assets/svg/orange_shadow.svg";
 import Eclipses from "../../assets/svg/eclipseSvgs.svg";
 
 function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signatureRef }) {
   const [mobile, setMobile] = useState(null);
+  const { t } = useTranslation();
 
   const animationContainer = useRef();
   const typedStrings = ["Frontend developer"];
@@ -40,11 +37,10 @@ function Hero({ arrowRef, headerRef, leftSectionRef, paragraphRef, svgRef, signa
             )}
           </div>
           <p className={styles.heroParagraph} ref={paragraphRef}>
-            Jestem developerem otwartym na nowe technologie i ciekawe projekty, angażuję się w wykonywane zadania i wprowadzam dobrą atmosferę do
-            zespołu.
+            {t("Hero_body")}
           </p>
           <Link to="#projectsSection" className={`link`} ref={signatureRef}>
-            <button className={`btnPrimary ${styles.contactBtn}`}>Zobacz moje projekty</button>
+            <button className={`btnPrimary ${styles.contactBtn}`}>{t("Hero_btn")}</button>
           </Link>
         </section>
         <section className={styles.rightSection} ref={svgRef}>

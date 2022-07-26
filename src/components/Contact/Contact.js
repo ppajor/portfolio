@@ -1,17 +1,19 @@
 import React from "react";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { HiMail, HiPhone } from "react-icons/hi";
-import { AiOutlineSend } from "react-icons/ai";
 
 import * as styles from "./contact.module.css";
 
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div id="contactSection" className="customContainer">
-      <h3 className={`sectionHeader revealTop ${styles.headerOrange}`}>KONTAKT</h3>
+      <h3 className={`sectionHeader revealTop ${styles.headerOrange}`}>{t("Navlink4")}</h3>
       <div className={styles.container}>
         <div className={`longCol revealLeft ${styles.contactInfo}`}>
-          <h2 className={`header ${styles.headerCustom}`}>Jak mogę Ci pomóc?</h2>
-          <p className="paragraph">Masz zlecenie? Oferujesz pracę, bądź po prostu masz pytanie? Skontaktuj się ze mną! :)</p>
+          <h2 className={`header ${styles.headerCustom}`}>{t("Contact_header")}</h2>
+          <p className="paragraph">{t("Contact_body")}</p>
           <div className={styles.contactBox}>
             <HiMail className={styles.icon} size={24} />
             <p className={styles.contactBoxText}>pawelpajor8@gmail.pl</p>
@@ -23,16 +25,16 @@ function Contact() {
         </div>
         <div className={`shortCol revealRight `}>
           <form className={styles.form} action="https://formsubmit.io/send/pompeczka17@gmail.com" method="POST">
-            <label className={styles.label}>Imię i nazwisko</label>
-            <input className={styles.input} name="name" placeholder="Wpisz imię i nazwisko..." />
+            <label className={styles.label}>{t("Contactform_input1")}</label>
+            <input className={styles.input} name="name" placeholder={`${t("Contactform_input1")}...`} />
             <label className={styles.label} type="email" name="mail">
-              Email
+              {t("Contactform_input2")}
             </label>
-            <input className={styles.input} placeholder="Wpisz email..." />
-            <label className={styles.label}>Wiadomość</label>
-            <textarea className={styles.input} name="message" placeholder="Wpisz wiadomość..." />
+            <input className={styles.input} placeholder={`${t("Contactform_input2")}...`} />
+            <label className={styles.label}>{t("Contactform_input3")}</label>
+            <textarea className={styles.input} name="message" placeholder={`${t("Contactform_input3")}...`} />
             <button className={` btnPrimary ${styles.btn}`} type="submit">
-              Wyślij
+              {t("Contactform_btn")}
             </button>
           </form>
         </div>

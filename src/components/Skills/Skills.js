@@ -15,18 +15,19 @@ import WebpackLogo from "../../assets/svg/logo-webpack.svg";
 import TypescriptLogo from "../../assets/svg/logo-typescript.svg";
 
 import * as styles from "./skills.module.css";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 function Skills() {
+  const { t } = useTranslation();
+
   return (
     <div id="skillsSection" className="customContainer">
-      <h3 className={`sectionHeader revealTop ${styles.headerGreen}`}>UMIEJĘTNOŚCI</h3>
+      <h3 className={`sectionHeader revealTop ${styles.headerGreen}`}>{t("Navlink3")}</h3>
 
       <div className={`marginContainer ${styles.container}`}>
         <div className={`revealLeft longCol ${styles.introSection}`}>
-          <h2 className={`header ${styles.headerPosition}`}>Technologie których używam</h2>
-          <p className="paragraph">
-            Używanie nowych technologii pomagają tworzyć projekty szybciej oraz umożliwiać lepszą współpracę i komunikację w zespole.
-          </p>
+          <h2 className={`header ${styles.headerPosition}`}>{t("Skills_header1")}</h2>
+          <p className="paragraph">{t("Skills_body1")}</p>
         </div>
         <div className={`revealRight shortCol ${styles.technologiesSection}`}>
           <div className={styles.technologyContainer}>
@@ -79,8 +80,8 @@ function Skills() {
         </div>
 
         <div className={`revealRight longCol ${styles.introSection} ${styles.toolsSection}`}>
-          <h2 className={`header ${styles.headerPosition}`}>Narzędzia których używam</h2>
-          <p className="paragraph">Narzędzia potrafią zaoszczędzić wiele czasu programiście, ułatwić pracę oraz pomagać realizować obrane cele.</p>
+          <h2 className={`header ${styles.headerPosition}`}>{t("Skills_header2")}</h2>
+          <p className="paragraph">{t("Skills_body2")}</p>
         </div>
       </div>
     </div>

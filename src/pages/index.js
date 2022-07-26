@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HiX } from "react-icons/hi";
+import { graphql } from "gatsby";
 
 import * as styles from "../styles/index.module.css";
 import Nav from "../components/Nav/Nav";
@@ -208,3 +209,17 @@ export default function Home() {
     </>
   );
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
